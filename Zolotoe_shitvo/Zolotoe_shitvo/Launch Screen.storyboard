@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,46 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Fon launcha" translatesAutoresizingMaskIntoConstraints="NO" id="kKr-1B-wwy">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Fon launcha" translatesAutoresizingMaskIntoConstraints="NO" id="atU-aF-HH5">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfX-47-nxE">
-                                <rect key="frame" x="185" y="232" width="231" height="135"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="231" id="sfx-Ya-ftB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Zolotoe_shitje_nadpis" translatesAutoresizingMaskIntoConstraints="NO" id="zfG-Ah-LCV">
+                                <rect key="frame" x="160" y="248" width="280" height="103"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="TfX-47-nxE" secondAttribute="bottom" id="3lw-ph-imz"/>
-                            <constraint firstItem="kKr-1B-wwy" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="JZO-El-gH6"/>
-                            <constraint firstItem="TfX-47-nxE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="MvT-jh-Drp"/>
-                            <constraint firstItem="TfX-47-nxE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="212" id="OpA-Bl-jTQ"/>
-                            <constraint firstItem="kKr-1B-wwy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="QQZ-Qm-Tzw"/>
-                            <constraint firstItem="TfX-47-nxE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="St1-xM-6v4"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="kKr-1B-wwy" secondAttribute="bottom" id="Zkh-bu-Qk9"/>
-                            <constraint firstItem="TfX-47-nxE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="duR-pO-edH"/>
-                            <constraint firstItem="TfX-47-nxE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jon-82-xEZ"/>
-                            <constraint firstAttribute="trailing" secondItem="kKr-1B-wwy" secondAttribute="trailing" id="qKW-6l-aAS"/>
-                            <constraint firstItem="kKr-1B-wwy" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="r2j-f1-Efx"/>
-                            <constraint firstItem="TfX-47-nxE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="s7c-8m-gg1"/>
-                            <constraint firstItem="TfX-47-nxE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="shZ-V9-Xv3"/>
-                            <constraint firstAttribute="trailing" secondItem="TfX-47-nxE" secondAttribute="trailing" id="uta-oa-8xg"/>
+                            <constraint firstItem="atU-aF-HH5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UMk-u6-77r"/>
+                            <constraint firstAttribute="trailing" secondItem="atU-aF-HH5" secondAttribute="trailing" id="ZtQ-qz-edd"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="atU-aF-HH5" secondAttribute="bottom" id="a0c-IZ-klo"/>
+                            <constraint firstItem="zfG-Ah-LCV" firstAttribute="centerX" secondItem="atU-aF-HH5" secondAttribute="centerX" id="aiM-tl-IY1"/>
+                            <constraint firstItem="atU-aF-HH5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bmq-NL-wJw"/>
+                            <constraint firstItem="zfG-Ah-LCV" firstAttribute="centerY" secondItem="atU-aF-HH5" secondAttribute="centerY" id="bxp-Bk-7B4"/>
+                            <constraint firstItem="atU-aF-HH5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eLX-ht-WGC"/>
+                            <constraint firstItem="atU-aF-HH5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="l1A-E1-sJs"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="MvT-jh-Drp"/>
-                                <exclude reference="St1-xM-6v4"/>
-                                <exclude reference="duR-pO-edH"/>
-                                <exclude reference="s7c-8m-gg1"/>
-                                <exclude reference="uta-oa-8xg"/>
-                                <exclude reference="3lw-ph-imz"/>
-                            </mask>
-                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -66,5 +44,6 @@
     </scenes>
     <resources>
         <image name="Fon launcha" width="320" height="568"/>
+        <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
     </resources>
 </document>

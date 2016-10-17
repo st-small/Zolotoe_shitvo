@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -17,15 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-Nu-CfY">
-                                <rect key="frame" x="180" y="236" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fon launcha" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-Nu-CfY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Zolotoe_shitje_nadpis" translatesAutoresizingMaskIntoConstraints="NO" id="IS2-9V-Nzr">
+                                <rect key="frame" x="160" y="248" width="280" height="103"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="GLp-Nu-CfY" secondAttribute="trailing" id="EcE-5u-Cgw"/>
                             <constraint firstItem="GLp-Nu-CfY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UCX-Hh-Ti0"/>
+                            <constraint firstItem="IS2-9V-Nzr" firstAttribute="centerY" secondItem="GLp-Nu-CfY" secondAttribute="centerY" id="dvl-Zn-ryM"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GLp-Nu-CfY" secondAttribute="bottom" id="kVh-4h-Iyb"/>
+                            <constraint firstItem="IS2-9V-Nzr" firstAttribute="centerX" secondItem="GLp-Nu-CfY" secondAttribute="centerX" id="nma-0z-FkC"/>
                             <constraint firstItem="GLp-Nu-CfY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wOs-JT-hLg"/>
                         </constraints>
                     </view>
@@ -35,6 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LaunchScreen" width="320" height="568"/>
+        <image name="Fon launcha" width="320" height="568"/>
+        <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
     </resources>
 </document>
