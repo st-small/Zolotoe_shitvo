@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fon launcha" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-Nu-CfY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="GLp-Nu-CfY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Zolotoe_shitje_nadpis" translatesAutoresizingMaskIntoConstraints="NO" id="IS2-9V-Nzr">
@@ -40,7 +40,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Fon launcha" width="320" height="568"/>
+        <image name="LaunchScreen" width="320" height="568"/>
         <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
     </resources>
 </document>

@@ -17,23 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Fon launcha" translatesAutoresizingMaskIntoConstraints="NO" id="atU-aF-HH5">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="SW6-WN-k4I">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Zolotoe_shitje_nadpis" translatesAutoresizingMaskIntoConstraints="NO" id="zfG-Ah-LCV">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Zolotoe_shitje_nadpis" translatesAutoresizingMaskIntoConstraints="NO" id="aOH-47-dww">
                                 <rect key="frame" x="160" y="248" width="280" height="103"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="atU-aF-HH5" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="UMk-u6-77r"/>
-                            <constraint firstAttribute="trailing" secondItem="atU-aF-HH5" secondAttribute="trailing" id="ZtQ-qz-edd"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="atU-aF-HH5" secondAttribute="bottom" id="a0c-IZ-klo"/>
-                            <constraint firstItem="zfG-Ah-LCV" firstAttribute="centerX" secondItem="atU-aF-HH5" secondAttribute="centerX" id="aiM-tl-IY1"/>
-                            <constraint firstItem="atU-aF-HH5" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="bmq-NL-wJw"/>
-                            <constraint firstItem="zfG-Ah-LCV" firstAttribute="centerY" secondItem="atU-aF-HH5" secondAttribute="centerY" id="bxp-Bk-7B4"/>
-                            <constraint firstItem="atU-aF-HH5" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="eLX-ht-WGC"/>
-                            <constraint firstItem="atU-aF-HH5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="l1A-E1-sJs"/>
+                            <constraint firstItem="SW6-WN-k4I" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="GqD-7W-muH"/>
+                            <constraint firstItem="aOH-47-dww" firstAttribute="centerX" secondItem="SW6-WN-k4I" secondAttribute="centerX" id="V45-sV-GU4"/>
+                            <constraint firstItem="SW6-WN-k4I" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Vt9-kp-xdY"/>
+                            <constraint firstItem="aOH-47-dww" firstAttribute="centerY" secondItem="SW6-WN-k4I" secondAttribute="centerY" id="fyf-Vb-70p"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="SW6-WN-k4I" secondAttribute="bottom" id="gRw-hT-ClY"/>
+                            <constraint firstAttribute="trailing" secondItem="SW6-WN-k4I" secondAttribute="trailing" id="qEg-cy-nf0"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -43,7 +41,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Fon launcha" width="320" height="568"/>
+        <image name="LaunchScreen" width="320" height="568"/>
         <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
     </resources>
 </document>
