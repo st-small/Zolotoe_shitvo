@@ -1,0 +1,6 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+target ’Zolotoe_shitvo’ do
+pod 'AFNetworking', '~> 3.0'
+pod ‘M13ProgressSuite’, ‘~>  1.2’
+end
