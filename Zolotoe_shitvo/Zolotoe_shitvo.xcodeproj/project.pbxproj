@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		520379BB1DB26AB400D3B5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379BA1DB26AB400D3B5D3 /* main.m */; };
 		520379BE1DB26AB400D3B5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379BD1DB26AB400D3B5D3 /* AppDelegate.m */; };
-		520379C11DB26AB400D3B5D3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379C01DB26AB400D3B5D3 /* ViewController.m */; };
-		520379C41DB26AB400D3B5D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520379C21DB26AB400D3B5D3 /* Main.storyboard */; };
 		520379C71DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 520379C51DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld */; };
 		520379C91DB26AB400D3B5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520379C81DB26AB400D3B5D3 /* Assets.xcassets */; };
 		520379D71DB26AB400D3B5D3 /* Zolotoe_shitvoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379D61DB26AB400D3B5D3 /* Zolotoe_shitvoTests.m */; };
 		520379E21DB26AB400D3B5D3 /* Zolotoe_shitvoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379E11DB26AB400D3B5D3 /* Zolotoe_shitvoUITests.m */; };
 		520379F21DB4065D00D3B5D3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */; };
+		57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */; };
+		57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FD13C81DD1E5E30086AA1E /* Main.storyboard */; };
 		D9FBD0470D0F7C6F5616D6E4 /* libPods-Zolotoe_shitvo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */; };
 /* End PBXBuildFile section */
 
@@ -42,9 +42,6 @@
 		520379BA1DB26AB400D3B5D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		520379BC1DB26AB400D3B5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		520379BD1DB26AB400D3B5D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		520379BF1DB26AB400D3B5D3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		520379C01DB26AB400D3B5D3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		520379C31DB26AB400D3B5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		520379C61DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zolotoe_shitvo.xcdatamodel; sourceTree = "<group>"; };
 		520379C81DB26AB400D3B5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520379CD1DB26AB400D3B5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,6 +53,9 @@
 		520379E31DB26AB400D3B5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zolotoe_shitvo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSFirstViewController.h; sourceTree = "<group>"; };
+		57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSFirstViewController.m; sourceTree = "<group>"; };
+		57FD13C81DD1E5E30086AA1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		FA83573B06462A34769ECE95 /* Pods-Zolotoe_shitvo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zolotoe_shitvo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zolotoe_shitvo/Pods-Zolotoe_shitvo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,9 +120,9 @@
 			children = (
 				520379BC1DB26AB400D3B5D3 /* AppDelegate.h */,
 				520379BD1DB26AB400D3B5D3 /* AppDelegate.m */,
-				520379BF1DB26AB400D3B5D3 /* ViewController.h */,
-				520379C01DB26AB400D3B5D3 /* ViewController.m */,
-				520379C21DB26AB400D3B5D3 /* Main.storyboard */,
+				57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */,
+				57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */,
+				57FD13C81DD1E5E30086AA1E /* Main.storyboard */,
 				520379C81DB26AB400D3B5D3 /* Assets.xcassets */,
 				520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */,
 				520379CD1DB26AB400D3B5D3 /* Info.plist */,
@@ -233,11 +233,12 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = SiS;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Stanly Shiyanovskiy";
 				TargetAttributes = {
 					520379B51DB26AB400D3B5D3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 3PTYV272Z4;
 					};
 					520379D11DB26AB400D3B5D3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -274,9 +275,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */,
 				520379F21DB4065D00D3B5D3 /* Launch Screen.storyboard in Resources */,
 				520379C91DB26AB400D3B5D3 /* Assets.xcassets in Resources */,
-				520379C41DB26AB400D3B5D3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +325,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		C203955E35AE2361197B2EAA /* [CP] Copy Pods Resources */ = {
@@ -349,8 +350,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				520379C11DB26AB400D3B5D3 /* ViewController.m in Sources */,
 				520379BE1DB26AB400D3B5D3 /* AppDelegate.m in Sources */,
+				57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */,
 				520379BB1DB26AB400D3B5D3 /* main.m in Sources */,
 				520379C71DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld in Sources */,
 			);
@@ -387,17 +388,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		520379C21DB26AB400D3B5D3 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				520379C31DB26AB400D3B5D3 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		520379E41DB26AB400D3B5D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -413,8 +403,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -458,8 +450,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -487,6 +481,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FA83573B06462A34769ECE95 /* Pods-Zolotoe_shitvo.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = Zolotoe_shitvo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SiS.Zolotoe-shitvo";
@@ -499,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48FF9C07C686B599694D6794 /* Pods-Zolotoe_shitvo.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = Zolotoe_shitvo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "SiS.Zolotoe-shitvo";
