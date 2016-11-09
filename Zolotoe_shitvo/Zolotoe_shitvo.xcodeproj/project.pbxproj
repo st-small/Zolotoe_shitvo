@@ -14,6 +14,7 @@
 		520379D71DB26AB400D3B5D3 /* Zolotoe_shitvoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379D61DB26AB400D3B5D3 /* Zolotoe_shitvoTests.m */; };
 		520379E21DB26AB400D3B5D3 /* Zolotoe_shitvoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379E11DB26AB400D3B5D3 /* Zolotoe_shitvoUITests.m */; };
 		520379F21DB4065D00D3B5D3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */; };
+		57023DFF1DD31BCB0045FA60 /* SiSServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57023DFE1DD31BCB0045FA60 /* SiSServerManager.m */; };
 		57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */; };
 		57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FD13C81DD1E5E30086AA1E /* Main.storyboard */; };
 		D9FBD0470D0F7C6F5616D6E4 /* libPods-Zolotoe_shitvo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */; };
@@ -53,6 +54,8 @@
 		520379E31DB26AB400D3B5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zolotoe_shitvo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		57023DFD1DD31BCB0045FA60 /* SiSServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSServerManager.h; sourceTree = "<group>"; };
+		57023DFE1DD31BCB0045FA60 /* SiSServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSServerManager.m; sourceTree = "<group>"; };
 		57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSFirstViewController.h; sourceTree = "<group>"; };
 		57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSFirstViewController.m; sourceTree = "<group>"; };
 		57FD13C81DD1E5E30086AA1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -120,8 +123,8 @@
 			children = (
 				520379BC1DB26AB400D3B5D3 /* AppDelegate.h */,
 				520379BD1DB26AB400D3B5D3 /* AppDelegate.m */,
-				57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */,
-				57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */,
+				57023E011DD31BDA0045FA60 /* Controllers */,
+				57023E001DD31BCF0045FA60 /* API */,
 				57FD13C81DD1E5E30086AA1E /* Main.storyboard */,
 				520379C81DB26AB400D3B5D3 /* Assets.xcassets */,
 				520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */,
@@ -156,6 +159,24 @@
 				520379E31DB26AB400D3B5D3 /* Info.plist */,
 			);
 			path = Zolotoe_shitvoUITests;
+			sourceTree = "<group>";
+		};
+		57023E001DD31BCF0045FA60 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				57023DFD1DD31BCB0045FA60 /* SiSServerManager.h */,
+				57023DFE1DD31BCB0045FA60 /* SiSServerManager.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		57023E011DD31BDA0045FA60 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */,
+				57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		CE333FE33EFCAD6E49156F4A /* Pods */ = {
@@ -353,6 +374,7 @@
 				520379BE1DB26AB400D3B5D3 /* AppDelegate.m in Sources */,
 				57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */,
 				520379BB1DB26AB400D3B5D3 /* main.m in Sources */,
+				57023DFF1DD31BCB0045FA60 /* SiSServerManager.m in Sources */,
 				520379C71DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
