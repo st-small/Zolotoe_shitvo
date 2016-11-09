@@ -24,18 +24,23 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="7bM-s0-Zba">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
+                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xuw-Jj-9VC" customClass="M13ProgressViewSegmentedBar">
+                                <rect key="frame" x="100" y="413" width="120" height="39"/>
+                                <color key="backgroundColor" red="0.78824869791666663" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="lcv-tr-Xlw"/>
+                                    <constraint firstAttribute="width" constant="120" id="wef-op-fX6"/>
+                                </constraints>
+                            </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Zolotoe_shitje_nadpis" translatesAutoresizingMaskIntoConstraints="NO" id="vyl-JN-Zzx">
                                 <rect key="frame" x="20" y="233" width="280" height="103"/>
                             </imageView>
-                            <view opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xuw-Jj-9VC" customClass="M13ProgressViewSegmentedBar">
-                                <rect key="frame" x="100" y="413" width="120" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.78824869791666663" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Xuw-Jj-9VC" firstAttribute="centerX" secondItem="vyl-JN-Zzx" secondAttribute="centerX" id="0Jo-ZQ-xaI"/>
                             <constraint firstItem="vyl-JN-Zzx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AG8-nC-Wrr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xuw-Jj-9VC" secondAttribute="bottom" constant="116" id="K7r-gd-0Xd"/>
                             <constraint firstItem="7bM-s0-Zba" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XxS-dO-q2G"/>
                             <constraint firstItem="7bM-s0-Zba" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cap-wW-o1W"/>
                             <constraint firstItem="vyl-JN-Zzx" firstAttribute="centerY" secondItem="7bM-s0-Zba" secondAttribute="centerY" id="hUb-TF-ydK"/>
