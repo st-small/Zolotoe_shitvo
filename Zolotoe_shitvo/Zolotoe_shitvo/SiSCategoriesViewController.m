@@ -15,6 +15,7 @@
 @interface SiSCategoriesViewController ()
 
 @property (strong, nonatomic) NSMutableArray* imagesArray;
+@property (strong, nonatomic) NSMutableArray* imagesIDs;
 @property (weak, nonatomic) IBOutlet UICollectionView *itemsTable;
 
 @end
@@ -24,19 +25,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                action:@selector(tappedCell:)];
+    doubleTap.numberOfTapsRequired = 1;
+    doubleTap.delaysTouchesBegan = YES;
+    [self.itemsTable addGestureRecognizer:doubleTap];
+    
     self.imagesArray = [NSMutableArray array];
+    self.imagesIDs = [NSMutableArray array];
     
     for (SiSProduct* obj in self.offerProducts) {
+
+        [self.imagesArray addObject:[self resizingImage:obj.img]];
+        [self.imagesIDs addObject:obj.idProduct];
         
-        UIImage* img = [self resizingImage:obj.img];
-        [self.imagesArray addObject:img];
     }
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         
         NSArray* temp = [NSArray arrayWithArray:self.imagesArray];
+        NSArray* temp2 = [NSArray arrayWithArray:self.imagesIDs];
         for (int i = 0; i < 100; i++) {
             [self.imagesArray addObjectsFromArray:temp];
+            [self.imagesIDs addObjectsFromArray:temp2];
             NSLog(@"%d", self.imagesArray.count);
         }
     });
@@ -67,6 +78,9 @@
     
     SiSCollectionViewCell* cell = (SiSCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     cell.imgView.image = self.imagesArray[indexPath.row];
+    cell.idProduct = self.imagesIDs[indexPath.row];
+    
+    
     
     return cell;
 }
@@ -118,5 +132,22 @@
 //    self.scrollingPoint = CGPointMake(self.scrollingPoint.x + 0.5, self.scrollingPoint.y);
 //}
 
+- (IBAction)tappedCell:(id)sender {
+    
+    CGPoint tappedPoint = [sender locationInView:self.itemsTable];
+    NSIndexPath *tappedCellPath = [self.itemsTable indexPathForItemAtPoint:tappedPoint];
+    
+    if (tappedCellPath) {
+        
+        SiSCollectionViewCell* cell = (SiSCollectionViewCell*)[self.itemsTable cellForItemAtIndexPath:tappedCellPath];
+        [self.itemsTable selectItemAtIndexPath:tappedCellPath
+                                          animated:YES
+                                    scrollPosition:UICollectionViewScrollPositionNone];
+        
+        NSLog(@"the cell tag is %@", cell.idProduct);
+        
+        
+    }
+}
 
 @end
