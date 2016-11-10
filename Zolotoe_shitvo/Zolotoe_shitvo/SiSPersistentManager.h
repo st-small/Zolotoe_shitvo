@@ -10,4 +10,12 @@
 
 @interface SiSPersistentManager : NSObject
 
+@property (strong, nonatomic) NSMutableArray* offerProducts;
+@property (strong, nonatomic) NSMutableArray* allProducts;
+
++ (SiSPersistentManager*) sharedManager;
+
+- (NSMutableArray*) getOfferProducts;
+
+
 @end

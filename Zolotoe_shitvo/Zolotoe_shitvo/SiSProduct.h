@@ -10,4 +10,10 @@
 
 @interface SiSProduct : NSObject
 
+@property (copy, nonatomic) NSString* title;
+@property (copy, nonatomic) NSString* idProduct;
+@property (strong, nonatomic) NSURL* imageURL;
+
+- (instancetype) initWithSingleDict:(NSDictionary*)singleProduct;
+
 @end

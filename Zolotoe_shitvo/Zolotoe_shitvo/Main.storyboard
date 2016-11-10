@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aZ7-29-2tD">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,10 +9,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XVq-2M-Dt0">
+            <objects>
+                <navigationController id="aZ7-29-2tD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Z4-ha-bst">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="rJ5-op-jWN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTO-nn-gRy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-703" y="34"/>
+        </scene>
         <!--SiS First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SiSFirstViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SiSFirstViewController" id="BYZ-38-t0r" customClass="SiSFirstViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -49,6 +65,7 @@
                             <constraint firstItem="vyl-JN-Zzx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wIQ-Ul-w2m"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ggO-OT-A74"/>
                     <connections>
                         <outlet property="progressView" destination="Xuw-Jj-9VC" id="PNR-tw-ccF"/>
                     </connections>
@@ -56,6 +73,35 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.375" y="33.802816901408448"/>
+        </scene>
+        <!--SiS Categories View Controller-->
+        <scene sceneID="8lq-rR-y36">
+            <objects>
+                <viewController storyboardIdentifier="SiSCategoriesViewController" id="zo9-84-Etv" customClass="SiSCategoriesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ahr-E2-ngM"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0b-Pi-kfJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c1A-9M-FrF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="e4d-d2-uJR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="e4d-d2-uJR" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="1np-7x-mkN"/>
+                            <constraint firstItem="e4d-d2-uJR" firstAttribute="centerY" secondItem="c1A-9M-FrF" secondAttribute="centerY" id="4L2-7m-3JS"/>
+                            <constraint firstItem="e4d-d2-uJR" firstAttribute="centerX" secondItem="c1A-9M-FrF" secondAttribute="centerX" id="9b0-Ub-JP5"/>
+                            <constraint firstItem="e4d-d2-uJR" firstAttribute="bottom" secondItem="a0b-Pi-kfJ" secondAttribute="top" id="qUw-4o-Z5f"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GzX-ET-M5w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.5" y="33.802816901408448"/>
         </scene>
     </scenes>
     <resources>

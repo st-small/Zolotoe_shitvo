@@ -8,6 +8,8 @@
 
 #import "SiSFirstViewController.h"
 #import "M13ProgressViewSegmentedBar.h"
+#import "SiSPersistentManager.h"
+#import "SiSCategoriesViewController.h"
 
 
 @interface SiSFirstViewController ()
@@ -21,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBarHidden = YES;
+    
     // Configure the progress view here.
     self.progressView.progressDirection = M13ProgressViewSegmentedBarProgressDirectionLeftToRight;
     self.progressView.segmentShape = M13ProgressViewSegmentedBarSegmentShapeCircle;
@@ -33,20 +37,39 @@
     // Update the progress as needed
     [self.progressView setProgress: 0.1 animated: YES];
     
-    
-    if (![self connectedToInternet]) {
-        
-        [self showAlertWhenNoInternet];
-    }
 }
 
 - (void) viewDidAppear:(BOOL)animated {
     
-    [super viewDidAppear:animated];
+    [super viewDidAppear:YES];
     
+    NSMutableArray* tmp = [[SiSPersistentManager sharedManager] getOfferProducts];
+    
+    // Проверка подключения интернет
+    if (![self connectedToInternet]) {
+        
+        [self showAlertWhenNoInternet];
+        
+    } else {
+    
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            
+            if (tmp.count > 0) {
+                
+                NSLog(@"Здесь открываем новый контроллер!");
+                
+                UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                SiSCategoriesViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSCategoriesViewController"];
+                vc.offerProducts = tmp;
+                [self.navigationController presentViewController:vc
+                                                        animated:YES
+                                                      completion:nil];
+            }
+        });
     }
+}
 
-//Проверка интернет соединения
+// Проверка интернет соединения
 - (BOOL) connectedToInternet {
     
     NSString *URLString = [NSString stringWithContentsOfURL:[NSURL URLWithString:@"http://www.ya.ru"]
@@ -57,7 +80,7 @@
     return (URLString != nil) ? YES : NO;
 }
 
-//Вывод алерта, когда нет интернет соединения
+// Вывод алерта, когда нет интернет соединения
 - (void) showAlertWhenNoInternet {
     
     UIAlertController* alert = [UIAlertController
@@ -67,6 +90,8 @@
     UIAlertAction* nopeAction = [UIAlertAction actionWithTitle:@"ОК"
                                                          style:UIAlertActionStyleDefault
                                                        handler:^(UIAlertAction * _Nonnull action) {
+                                                           
+                                                           [self dismissViewControllerAnimated:YES completion:nil];
                                                            
                                                        }];
     
