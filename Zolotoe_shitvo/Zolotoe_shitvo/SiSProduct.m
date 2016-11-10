@@ -6,6 +6,7 @@
 //  Copyright © 2016 Stanly Shiyanovskiy. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
 #import "SiSProduct.h"
 
 @implementation SiSProduct
@@ -23,12 +24,17 @@
         NSString* idProduct = [NSString stringWithFormat:@"%@", singleProduct[@"id"]];
         self.idProduct = idProduct;
         
-        //Достаю фотку для предпросмотра
+        //Достаю ссылку на фотку для предпросмотра
         NSDictionary* imageDict = singleProduct[@"better_featured_image"];
-        self.imageURL = imageDict[@"source_url"];
-        NSLog(@"source url: %@", self.imageURL);
-    }
+        self.imageURL = [NSURL URLWithString:imageDict[@"source_url"]];
+        //NSLog(@"source url: %@", self.imageURL);
+        
+        //Достаю фотку для предпросмотра
+        NSData* imageData = [[NSData alloc] initWithContentsOfURL:self.imageURL];
+        self.img = [UIImage imageWithData: imageData];
     
+    }
+        
     return self;
 }
 

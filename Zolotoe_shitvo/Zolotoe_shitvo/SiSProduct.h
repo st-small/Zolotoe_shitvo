@@ -13,6 +13,7 @@
 @property (copy, nonatomic) NSString* title;
 @property (copy, nonatomic) NSString* idProduct;
 @property (strong, nonatomic) NSURL* imageURL;
+@property (strong, nonatomic) UIImage* img;
 
 - (instancetype) initWithSingleDict:(NSDictionary*)singleProduct;
 

@@ -78,7 +78,7 @@ static NSString* originLink = @"http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/";
                              
                              NSDictionary* singleProduct = array[i];
                              
-                             NSLog(@"новый жсон: %@", singleProduct);
+                             //NSLog(@"новый жсон: %@", singleProduct);
                              
                              SiSProduct* product = [[SiSProduct alloc] initWithSingleDict:singleProduct];
                              
