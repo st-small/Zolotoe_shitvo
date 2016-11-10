@@ -38,4 +38,25 @@
     return self;
 }
 
+- (void)encodeWithCoder:(NSCoder*)aCoder {
+    
+    [aCoder encodeObject:self.title forKey:@"title"];
+    [aCoder encodeObject:self.idProduct forKey:@"id"];
+    [aCoder encodeObject:self.imageURL forKey:@"img_url"];
+    [aCoder encodeObject:self.img forKey:@"img"];
+    
+}
+
+- (instancetype)initWithCoder:(NSCoder*)aDecoder {
+    
+    self = [super init];
+    if (self) {
+        _title = [aDecoder decodeObjectForKey:@"title"];
+        _idProduct = [aDecoder decodeObjectForKey:@"id"];
+        _imageURL = [aDecoder decodeObjectForKey:@"img_url"];
+        _img = [aDecoder decodeObjectForKey:@"img"];
+    }
+    return self;
+}
+
 @end

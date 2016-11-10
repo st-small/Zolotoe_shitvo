@@ -8,12 +8,17 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Izhitsa Normal.Ttf">
+            <string>Izhitsa</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Navigation Controller-->
         <scene sceneID="XVq-2M-Dt0">
             <objects>
                 <navigationController id="aZ7-29-2tD" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Z4-ha-bst">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9Z4-ha-bst">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -131,6 +136,16 @@
                                     <outlet property="delegate" destination="zo9-84-Etv" id="75d-PI-mP9"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33N-9S-U1c">
+                                <rect key="frame" x="16" y="208" width="288" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                <color key="tintColor" red="0.9959295392036438" green="0.84623318910598755" blue="0.59088599681854248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Митры" backgroundImage="Rectangle 2 Copy 3"/>
+                                <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -154,6 +169,8 @@
     </scenes>
     <resources>
         <image name="LaunchScreen" width="320" height="568"/>
+        <image name="Rectangle 2 Copy 3" width="307" height="52"/>
+        <image name="Rectangle H 2 Copy 3" width="307" height="52"/>
         <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
     </resources>
 </document>

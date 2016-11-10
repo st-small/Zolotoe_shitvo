@@ -5,6 +5,7 @@
 //  Created by Stanly Shiyanovskiy on 09.11.16.
 //  Copyright © 2016 Stanly Shiyanovskiy. All rights reserved.
 //
+//  В этом классе реализуется обращение к серверу и получение массивов товаров. SiSServerManager является синглтоном (вызывается единожды).
 
 #import <Foundation/Foundation.h>
 

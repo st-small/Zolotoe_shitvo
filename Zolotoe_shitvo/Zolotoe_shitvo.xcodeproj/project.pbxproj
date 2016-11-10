@@ -19,6 +19,7 @@
 		57023E071DD32A450045FA60 /* SiSProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 57023E061DD32A450045FA60 /* SiSProduct.m */; };
 		5704836D1DD45836000FAD01 /* SiSCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5704836C1DD45836000FAD01 /* SiSCategoriesViewController.m */; };
 		570483741DD46168000FAD01 /* SiSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570483731DD46168000FAD01 /* SiSCollectionViewCell.m */; };
+		570C6F831DD51A9C007F2855 /* Izhitsa Normal.Ttf in Resources */ = {isa = PBXBuildFile; fileRef = 570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */; };
 		57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */; };
 		57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FD13C81DD1E5E30086AA1E /* Main.storyboard */; };
 		D9FBD0470D0F7C6F5616D6E4 /* libPods-Zolotoe_shitvo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */; };
@@ -68,6 +69,7 @@
 		5704836C1DD45836000FAD01 /* SiSCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCategoriesViewController.m; sourceTree = "<group>"; };
 		570483721DD46168000FAD01 /* SiSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSCollectionViewCell.h; sourceTree = "<group>"; };
 		570483731DD46168000FAD01 /* SiSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCollectionViewCell.m; sourceTree = "<group>"; };
+		570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Izhitsa Normal.Ttf"; sourceTree = "<group>"; };
 		57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSFirstViewController.h; sourceTree = "<group>"; };
 		57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSFirstViewController.m; sourceTree = "<group>"; };
 		57FD13C81DD1E5E30086AA1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				57FD13C81DD1E5E30086AA1E /* Main.storyboard */,
 				520379C81DB26AB400D3B5D3 /* Assets.xcassets */,
 				520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */,
+				570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */,
 				520379CD1DB26AB400D3B5D3 /* Info.plist */,
 				520379C51DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld */,
 				520379B91DB26AB400D3B5D3 /* Supporting Files */,
@@ -335,6 +338,7 @@
 				57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */,
 				520379F21DB4065D00D3B5D3 /* Launch Screen.storyboard in Resources */,
 				520379C91DB26AB400D3B5D3 /* Assets.xcassets in Resources */,
+				570C6F831DD51A9C007F2855 /* Izhitsa Normal.Ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -38,19 +38,40 @@
     
     self.offerProducts = [NSMutableArray array];
     
-    [[SiSServerManager sharedManager] getProductsWithOfferParameterAndOffset:self.offerProducts.count
-                                                                    andCount:100
-                                                                   onSuccess:^(NSArray* productsArray) {
-                                                                       
-                                                                       [self.offerProducts addObjectsFromArray:productsArray];
-                                                                       
-                                                                   } onFailure:^(NSError *error) {
-                                                                       
-                                                                       NSLog(@"error = %@", [error localizedDescription]);
-                                                                   
-                                                                   }];
+    NSData* data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:@"/Documents/offerProducts.bin"]];
+    
+    self.offerProducts = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    if (self.offerProducts.count < 1) {
+        
+        NSLog(@"Will fetch API!");
+        
+        [[SiSServerManager sharedManager] getProductsWithOfferParameterAndOffset:self.offerProducts.count
+                                                                        andCount:10
+                                                                       onSuccess:^(NSArray* productsArray) {
+                                                                           
+                                                                           [self.offerProducts addObjectsFromArray:productsArray];
+                                                                           
+                                                                           [self saveOfferProducts];
+                                                                           
+                                                                       } onFailure:^(NSError *error) {
+                                                                           
+                                                                           NSLog(@"error = %@", [error localizedDescription]);
+                                                                           
+                                                                       }];
+    } else {
+        
+        NSLog(@"Will NOT fetch API!");
+    }
     
     return self.offerProducts;
+}
+
+- (void) saveOfferProducts {
+    
+    NSString* filename = [NSHomeDirectory() stringByAppendingString:@"/Documents/offerProducts.bin"];
+    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:self.offerProducts];
+    [data writeToFile:filename atomically:YES];
 }
 
 @end

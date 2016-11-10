@@ -5,6 +5,7 @@
 //  Created by Stanly Shiyanovskiy on 09.11.16.
 //  Copyright © 2016 Stanly Shiyanovskiy. All rights reserved.
 //
+//  Этот класс отвечает за выборку данных с сайта, передачу их в контроллеры и архивацию для последующего использования в режиме офллайн
 
 #import <Foundation/Foundation.h>
 
@@ -16,6 +17,5 @@
 + (SiSPersistentManager*) sharedManager;
 
 - (NSMutableArray*) getOfferProducts;
-
 
 @end
