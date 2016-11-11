@@ -38,10 +38,6 @@
     
     self.offerProducts = [NSMutableArray array];
     
-    NSData* data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:@"/Documents/offerProducts.bin"]];
-    
-    self.offerProducts = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-    
     if (self.offerProducts.count < 1) {
         
         NSLog(@"Will fetch API!");
@@ -62,6 +58,10 @@
     } else {
         
         NSLog(@"Will NOT fetch API!");
+        
+            NSData* data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:@"/Documents/offerProducts.bin"]];
+        
+            self.offerProducts = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
     
     return self.offerProducts;
