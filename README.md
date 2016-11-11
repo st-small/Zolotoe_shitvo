@@ -15,3 +15,5 @@ To get posts with offset: http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/posts?of
 To get posts from start page with offset: http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/posts?filter[meta_key]=offer&filter[meta_value]=1&offset=
 
 To get all media files from one post: http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/media?parent=6699
+
+To get all information from one post by it's ID (for example ID is 6484) http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/posts/6484
