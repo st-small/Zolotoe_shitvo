@@ -28,6 +28,9 @@
         NSLog(@"Уже запускалось!");
     }
     
+    // Решил убрать статус бар во всем приложении
+    application.statusBarHidden = YES;
+    
     return YES;
 }
 

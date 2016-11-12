@@ -48,7 +48,7 @@
         for (int i = 0; i < 100; i++) {
             [self.imagesArray addObjectsFromArray:temp];
             [self.imagesIDs addObjectsFromArray:temp2];
-            NSLog(@"%d", self.imagesArray.count);
+            //NSLog(@"%d", self.imagesArray.count);
         }
     });
     
