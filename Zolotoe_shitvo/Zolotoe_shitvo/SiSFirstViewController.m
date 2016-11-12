@@ -10,9 +10,10 @@
 #import "M13ProgressViewSegmentedBar.h"
 #import "SiSPersistentManager.h"
 #import "SiSCategoriesViewController.h"
+#import "SiSTabBarControllerViewController.h"
 
 
-@interface SiSFirstViewController ()
+@interface SiSFirstViewController () <UITabBarControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet M13ProgressViewSegmentedBar* progressView;
 
@@ -59,8 +60,9 @@
                 NSLog(@"Здесь открываем новый контроллер!");
                 
                 UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                SiSCategoriesViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSCategoriesViewController"];
-                vc.offerProducts = tmp;
+                SiSTabBarControllerViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSTabBarControllerViewController"];
+                SiSCategoriesViewController* vc2 = [vc.viewControllers objectAtIndex:0];
+                vc2.offerProducts = tmp;
                 [self.navigationController presentViewController:vc
                                                         animated:YES
                                                       completion:nil];

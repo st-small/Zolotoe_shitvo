@@ -9,6 +9,7 @@
 #import "SiSCategoriesViewController.h"
 #import "SiSProduct.h"
 #import "SiSCollectionViewCell.h"
+#import "SiSPersistentManager.h"
 
 #define targetHeight 170
 
