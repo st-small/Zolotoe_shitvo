@@ -64,10 +64,12 @@
                         <constraints>
                             <constraint firstItem="Xuw-Jj-9VC" firstAttribute="centerX" secondItem="vyl-JN-Zzx" secondAttribute="centerX" id="0Jo-ZQ-xaI"/>
                             <constraint firstItem="vyl-JN-Zzx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AG8-nC-Wrr"/>
+                            <constraint firstItem="7bM-s0-Zba" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BAU-LU-pbJ"/>
+                            <constraint firstAttribute="trailing" secondItem="7bM-s0-Zba" secondAttribute="trailing" id="D90-Qd-R7p"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xuw-Jj-9VC" secondAttribute="bottom" constant="116" id="K7r-gd-0Xd"/>
+                            <constraint firstItem="7bM-s0-Zba" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UGK-wL-1yG"/>
                             <constraint firstItem="vyl-JN-Zzx" firstAttribute="centerY" secondItem="7bM-s0-Zba" secondAttribute="centerY" id="hUb-TF-ydK"/>
                             <constraint firstItem="7bM-s0-Zba" firstAttribute="centerX" secondItem="vyl-JN-Zzx" secondAttribute="centerX" id="ttq-M0-nGe"/>
-                            <constraint firstItem="7bM-s0-Zba" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" constant="1" id="u4a-Vr-bSR"/>
                             <constraint firstItem="vyl-JN-Zzx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wIQ-Ul-w2m"/>
                         </constraints>
                     </view>
@@ -92,13 +94,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="e4d-d2-uJR">
-                                <rect key="frame" x="0.0" y="-158" width="320" height="568"/>
-                                <gestureRecognizers/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="8KT-Vq-VOS">
-                                <rect key="frame" x="0.0" y="298" width="320" height="568"/>
-                                <gestureRecognizers/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScrollView" translatesAutoresizingMaskIntoConstraints="NO" id="Src-al-vjN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thd-M2-Hzg">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
@@ -222,6 +219,7 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" id="3he-L8-lC5"/>
                                     <constraint firstItem="xZf-RW-0gW" firstAttribute="leading" secondItem="Thd-M2-Hzg" secondAttribute="leadingMargin" id="Bs3-ZW-GKt"/>
                                     <constraint firstItem="Kr0-I0-Zm6" firstAttribute="top" secondItem="Thd-M2-Hzg" secondAttribute="top" constant="15" id="FH2-8g-ypI"/>
                                     <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="Tvi-Gf-8KA" secondAttribute="leading" id="GKE-QQ-H3i"/>
@@ -229,6 +227,7 @@
                                     <constraint firstItem="5fz-v4-oTw" firstAttribute="top" secondItem="Tvi-Gf-8KA" secondAttribute="bottom" constant="8" id="Igf-h9-oVW"/>
                                     <constraint firstItem="lI3-Ph-9PU" firstAttribute="top" secondItem="33N-9S-U1c" secondAttribute="bottom" constant="8" id="KxB-us-cnU"/>
                                     <constraint firstAttribute="bottom" secondItem="vxl-cz-Fja" secondAttribute="bottom" constant="14" id="Lb2-KV-TkA"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" id="N9Y-DD-akz"/>
                                     <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="vxl-cz-Fja" secondAttribute="leading" id="Oxk-Am-CRx"/>
                                     <constraint firstItem="Kr0-I0-Zm6" firstAttribute="centerX" secondItem="33N-9S-U1c" secondAttribute="centerX" id="RjB-Qo-dVW"/>
                                     <constraint firstItem="I1V-a6-LmT" firstAttribute="top" secondItem="1pW-sp-bc5" secondAttribute="bottom" constant="8" id="SCI-n8-Gwd"/>
@@ -236,6 +235,7 @@
                                     <constraint firstItem="1pW-sp-bc5" firstAttribute="top" secondItem="5fz-v4-oTw" secondAttribute="bottom" constant="8" id="ahe-1z-uOQ"/>
                                     <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="5fz-v4-oTw" secondAttribute="leading" id="hY3-VC-8G6"/>
                                     <constraint firstItem="33N-9S-U1c" firstAttribute="top" secondItem="Kr0-I0-Zm6" secondAttribute="bottom" constant="13" id="m1I-4C-vc6"/>
+                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="leading" secondItem="Thd-M2-Hzg" secondAttribute="leading" id="mkU-XQ-VOZ"/>
                                     <constraint firstItem="vxl-cz-Fja" firstAttribute="top" secondItem="I1V-a6-LmT" secondAttribute="bottom" constant="8" id="oOj-0u-gQm"/>
                                     <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="1pW-sp-bc5" secondAttribute="leading" id="s6i-Kp-gWo"/>
                                     <constraint firstItem="lI3-Ph-9PU" firstAttribute="leading" secondItem="33N-9S-U1c" secondAttribute="leading" id="tqp-m9-URU"/>
@@ -250,17 +250,18 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Thd-M2-Hzg" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="0Zr-6v-G5n"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" constant="-16" id="5yc-7F-cMg"/>
                             <constraint firstAttribute="trailing" secondItem="Thd-M2-Hzg" secondAttribute="trailing" id="7z8-rc-IcL"/>
                             <constraint firstItem="a0b-Pi-kfJ" firstAttribute="top" secondItem="Thd-M2-Hzg" secondAttribute="bottom" id="Aam-BX-Rym"/>
                             <constraint firstItem="Thd-M2-Hzg" firstAttribute="top" secondItem="c1A-9M-FrF" secondAttribute="top" id="CBN-tO-b3I"/>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="centerY" secondItem="8KT-Vq-VOS" secondAttribute="centerY" constant="-259.5" id="DOL-2y-w1H"/>
+                            <constraint firstItem="Src-al-vjN" firstAttribute="top" secondItem="c1A-9M-FrF" secondAttribute="top" id="Cig-CY-oEg"/>
                             <constraint firstItem="Thd-M2-Hzg" firstAttribute="top" secondItem="c1A-9M-FrF" secondAttribute="top" id="LYs-Wg-a6c"/>
                             <constraint firstItem="a0b-Pi-kfJ" firstAttribute="top" secondItem="Thd-M2-Hzg" secondAttribute="bottom" id="OTB-j3-cHb"/>
+                            <constraint firstAttribute="trailing" secondItem="Src-al-vjN" secondAttribute="trailing" id="XlP-OB-OD2"/>
                             <constraint firstItem="Thd-M2-Hzg" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="YU8-jV-Q33"/>
+                            <constraint firstItem="a0b-Pi-kfJ" firstAttribute="top" secondItem="Src-al-vjN" secondAttribute="bottom" id="dFD-fU-Gzq"/>
                             <constraint firstAttribute="trailing" secondItem="Thd-M2-Hzg" secondAttribute="trailing" id="dTb-P7-k4X"/>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="centerY" secondItem="e4d-d2-uJR" secondAttribute="centerY" constant="196.5" id="ehX-lD-JwG"/>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="leading" secondItem="8KT-Vq-VOS" secondAttribute="leading" id="h56-0e-JqV"/>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="leading" secondItem="e4d-d2-uJR" secondAttribute="leading" id="l5h-Gc-ZCg"/>
+                            <constraint firstItem="Src-al-vjN" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="mVR-4G-jQM"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -279,7 +280,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1568" y="-879"/>
+            <point key="canvasLocation" x="1567.5" y="-879.92957746478874"/>
         </scene>
         <!--SiS Tab Bar Controller View Controller-->
         <scene sceneID="pCc-oh-v2g">
@@ -370,6 +371,7 @@
         <image name="Places_Places-3" width="19" height="20"/>
         <image name="Rectangle 2 Copy 3" width="307" height="52"/>
         <image name="Rectangle H 2 Copy 3" width="307" height="52"/>
+        <image name="ScrollView" width="320" height="645"/>
         <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
     </resources>
 </document>
