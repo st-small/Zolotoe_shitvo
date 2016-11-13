@@ -14,11 +14,8 @@
     
     [super viewDidLoad];
     
-    [self.tabBarItem setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIFont fontWithName:@"Izhitsa" size:16.0], NSFontAttributeName, nil] forState:UIControlStateNormal];
-    
-    self.tabBarItem.title = @"fdkjhsf";
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Izhitsa" size:16.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+
 }
 
 @end
