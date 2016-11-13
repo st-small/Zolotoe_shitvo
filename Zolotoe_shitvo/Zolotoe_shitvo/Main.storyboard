@@ -264,7 +264,7 @@
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Главная" id="gYd-A3-WgA"/>
+                    <tabBarItem key="tabBarItem" title="Главная" image="Places_Places-3" selectedImage="Places_Places-3" id="gYd-A3-WgA"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="694"/>
@@ -317,7 +317,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="2" title="Контакты" id="7d7-Fb-kJO"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Контакты" image="Phone_Phone-19" selectedImage="Phone_Phone-19" id="7d7-Fb-kJO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLc-2E-5jU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -336,7 +336,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="1" title="О нас" id="FNo-uK-f4H"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="О нас" image="Alerts-2" selectedImage="Alerts-2" id="FNo-uK-f4H"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxx-jo-cGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,7 +355,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" tag="3" title="Новости" id="A9g-01-Vip"/>
+                    <tabBarItem key="tabBarItem" tag="3" title="Новости" image="Files_Files-43" selectedImage="Files_Files-43" id="A9g-01-Vip"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dXM-hc-7ap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -363,7 +363,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Alerts-2" width="25" height="25"/>
+        <image name="Files_Files-43" width="14" height="20"/>
         <image name="LaunchScreen" width="320" height="568"/>
+        <image name="Phone_Phone-19" width="23" height="24"/>
+        <image name="Places_Places-3" width="19" height="20"/>
         <image name="Rectangle 2 Copy 3" width="307" height="52"/>
         <image name="Rectangle H 2 Copy 3" width="307" height="52"/>
         <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
