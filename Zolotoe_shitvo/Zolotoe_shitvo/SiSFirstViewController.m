@@ -16,6 +16,7 @@
 @interface SiSFirstViewController () <UITabBarControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet M13ProgressViewSegmentedBar* progressView;
+@property (strong, nonatomic) NSMutableArray* tempArray;
 
 @end
 
@@ -44,30 +45,35 @@
     
     [super viewDidAppear:YES];
     
-    NSMutableArray* tmp = [[SiSPersistentManager sharedManager] getOfferProducts];
-    
-    // Проверка подключения интернет
+    // Проверка подключения интернет и переход к следующему вью
     if (![self connectedToInternet]) {
         
         [self showAlertWhenNoInternet];
         
     } else {
-    
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            
-            if (tmp.count > 0) {
-                
-                NSLog(@"Здесь открываем новый контроллер!");
-                
-                UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-                SiSTabBarControllerViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSTabBarControllerViewController"];
-                SiSCategoriesViewController* vc2 = [vc.viewControllers objectAtIndex:0];
-                vc2.offerProducts = tmp;
-                [self.navigationController presentViewController:vc
-                                                        animated:YES
-                                                      completion:nil];
-            }
-        });
+        
+        [self downloadAndPushNextView];
+        
+//        void (^getOfferProducts) () = ^ {
+//            
+//            self.tempArray = [[SiSPersistentManager sharedManager] getOfferProducts];
+//            
+//            if (self.tempArray.count > 0) {
+//                
+//                NSLog(@"Здесь открываем новый контроллер!");
+//                UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//                SiSTabBarControllerViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSTabBarControllerViewController"];
+//                SiSCategoriesViewController* vc2 = [vc.viewControllers objectAtIndex:0];
+//                vc2.offerProducts = self.tempArray;
+//                [self.navigationController presentViewController:vc
+//                                                        animated:YES
+//                                                      completion:nil];
+//            }
+//
+//        };
+//        
+//        getOfferProducts();
+        
     }
 }
 
@@ -102,7 +108,28 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
-
+//  Метод перехода на новый вью контроллер с offerProducts
+- (void) downloadAndPushNextView {
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        self.tempArray = [[SiSPersistentManager sharedManager] getOfferProducts];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.tempArray.count > 0) {
+                
+                NSLog(@"Здесь открываем новый контроллер!");
+                UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+                SiSTabBarControllerViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSTabBarControllerViewController"];
+                SiSCategoriesViewController* vc2 = [vc.viewControllers objectAtIndex:0];
+                vc2.offerProducts = self.tempArray;
+                [self.navigationController presentViewController:vc
+                                                        animated:YES
+                                                      completion:nil];
+            }
+        });
+    });
+}
 
 
 @end

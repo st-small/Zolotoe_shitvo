@@ -19,6 +19,9 @@
 @property (strong, nonatomic) NSMutableArray* imagesIDs;
 @property (weak, nonatomic) IBOutlet UICollectionView *itemsTable;
 
+@property (nonatomic, assign) CGPoint scrollingPoint, endPoint;
+@property (nonatomic, strong) NSTimer *scrollingTimer;
+
 @end
 
 @implementation SiSCategoriesViewController
@@ -54,6 +57,8 @@
     });
     
     [self.itemsTable reloadData];
+    
+    [self scrollSlowly];
 
 }
 
@@ -118,20 +123,20 @@
 
 #pragma mark Animation methods
 
-//- (void)scrollSlowly {
-//    self.endPoint = CGPointMake(3000, 0);
-//    self.scrollingPoint = CGPointMake(0, 0);
-//    self.scrollingTimer = [NSTimer scheduledTimerWithTimeInterval:0.01 target:self selector:@selector(scrollSlowlyToPoint) userInfo:nil repeats:YES];
-//}
-//
-//- (void)scrollSlowlyToPoint {
-//    
-//    self.itemsTable.contentOffset = self.scrollingPoint;
-//    if (CGPointEqualToPoint(self.scrollingPoint, self.endPoint)) {
-//        [self.scrollingTimer invalidate];
-//    }
-//    self.scrollingPoint = CGPointMake(self.scrollingPoint.x + 0.5, self.scrollingPoint.y);
-//}
+- (void)scrollSlowly {
+    self.endPoint = CGPointMake(0, self.itemsTable.frame.size.width);
+    self.scrollingPoint = CGPointMake(0, 0);
+    self.scrollingTimer = [NSTimer scheduledTimerWithTimeInterval:0.015 target:self selector:@selector(scrollSlowlyToPoint) userInfo:nil repeats:YES];
+}
+
+- (void)scrollSlowlyToPoint {
+    
+    self.itemsTable.contentOffset = self.scrollingPoint;
+    if (CGPointEqualToPoint(self.scrollingPoint, self.endPoint)) {
+        [self.scrollingTimer invalidate];
+    }
+    self.scrollingPoint = CGPointMake(self.scrollingPoint.x + 0.3, 0);
+}
 
 - (IBAction)tappedCell:(id)sender {
     
