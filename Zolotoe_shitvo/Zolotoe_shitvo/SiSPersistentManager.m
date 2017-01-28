@@ -48,9 +48,13 @@
                                                                         andCount:10
                                                                        onSuccess:^(NSArray* productsArray) {
                                                                            
+                                                                           NSLog(@"productsArray count is %d", productsArray.count);
+                                                                           
                                                                            [self.offerProducts addObjectsFromArray:productsArray];
                                                                            
                                                                            [self saveOfferProducts];
+                                                                           
+                                                                           [[NSNotificationCenter defaultCenter] postNotificationName:@"offerProductsReady" object:nil userInfo:nil];
                                                                            
                                                                        } onFailure:^(NSError *error) {
                                                                            
@@ -61,7 +65,7 @@
         
         NSLog(@"Will NOT fetch API!");
         
-            self.offerProducts = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        self.offerProducts = [NSKeyedUnarchiver unarchiveObjectWithData:data];
     }
     
     return self.offerProducts;
