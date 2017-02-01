@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -91,14 +92,14 @@
                         <viewControllerLayoutGuide type="bottom" id="a0b-Pi-kfJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c1A-9M-FrF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="676"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScrollView" translatesAutoresizingMaskIntoConstraints="NO" id="Src-al-vjN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="676"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thd-M2-Hzg">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="684"/>
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kr0-I0-Zm6">
                                         <rect key="frame" x="0.0" y="15" width="320" height="180"/>
@@ -145,8 +146,11 @@
                                         </connections>
                                     </collectionView>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33N-9S-U1c">
-                                        <rect key="frame" x="7" y="208" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="211" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="33N-9S-U1c" secondAttribute="height" multiplier="31:5" id="pls-sb-IC9"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.9959295392036438" green="0.84623318910598755" blue="0.59088599681854248" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Иконы" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -154,8 +158,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-Ph-9PU">
-                                        <rect key="frame" x="7" y="268" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="270" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="lI3-Ph-9PU" secondAttribute="height" multiplier="31:5" id="E16-wC-Lbk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Митры" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -163,8 +170,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZf-RW-0gW">
-                                        <rect key="frame" x="8" y="328" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="329" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="xZf-RW-0gW" secondAttribute="height" multiplier="31:5" id="vtK-Wd-LlS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Облачения" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -172,8 +182,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tvi-Gf-8KA">
-                                        <rect key="frame" x="8" y="388" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="388" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Tvi-Gf-8KA" secondAttribute="height" multiplier="31:5" id="6vA-nk-grg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Храмовое убранство" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -181,8 +194,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fz-v4-oTw">
-                                        <rect key="frame" x="8" y="448" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="447" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="5fz-v4-oTw" secondAttribute="height" multiplier="31:5" id="S9h-Yu-29a"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Геральдика" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -190,8 +206,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pW-sp-bc5">
-                                        <rect key="frame" x="8" y="508" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="506" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1pW-sp-bc5" secondAttribute="height" multiplier="31:5" id="R4S-aO-fX7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Металлонить" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -199,8 +218,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1V-a6-LmT">
-                                        <rect key="frame" x="8" y="568" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="565" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="I1V-a6-LmT" secondAttribute="height" multiplier="31:5" id="ao9-sm-ifW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Церковне ткани" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -208,8 +230,11 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vxl-cz-Fja">
-                                        <rect key="frame" x="8" y="628" width="307" height="52"/>
-                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                        <rect key="frame" x="36" y="624" width="248" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vxl-cz-Fja" secondAttribute="height" multiplier="31:5" id="7st-fV-myL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="20"/>
                                         <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Разное" backgroundImage="Rectangle 2 Copy 3"/>
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
@@ -219,56 +244,58 @@
                                 </subviews>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" id="3he-L8-lC5"/>
-                                    <constraint firstItem="xZf-RW-0gW" firstAttribute="leading" secondItem="Thd-M2-Hzg" secondAttribute="leadingMargin" id="Bs3-ZW-GKt"/>
-                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="top" secondItem="Thd-M2-Hzg" secondAttribute="top" constant="15" id="FH2-8g-ypI"/>
-                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="Tvi-Gf-8KA" secondAttribute="leading" id="GKE-QQ-H3i"/>
-                                    <constraint firstItem="xZf-RW-0gW" firstAttribute="top" secondItem="lI3-Ph-9PU" secondAttribute="bottom" constant="8" id="I8C-zU-CcM"/>
-                                    <constraint firstItem="5fz-v4-oTw" firstAttribute="top" secondItem="Tvi-Gf-8KA" secondAttribute="bottom" constant="8" id="Igf-h9-oVW"/>
-                                    <constraint firstItem="lI3-Ph-9PU" firstAttribute="top" secondItem="33N-9S-U1c" secondAttribute="bottom" constant="8" id="KxB-us-cnU"/>
-                                    <constraint firstAttribute="bottom" secondItem="vxl-cz-Fja" secondAttribute="bottom" constant="14" id="Lb2-KV-TkA"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" id="N9Y-DD-akz"/>
-                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="vxl-cz-Fja" secondAttribute="leading" id="Oxk-Am-CRx"/>
-                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="centerX" secondItem="33N-9S-U1c" secondAttribute="centerX" id="RjB-Qo-dVW"/>
-                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="top" secondItem="1pW-sp-bc5" secondAttribute="bottom" constant="8" id="SCI-n8-Gwd"/>
-                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="centerX" secondItem="vxl-cz-Fja" secondAttribute="centerX" constant="-1.5" id="Z3f-sx-roq"/>
-                                    <constraint firstItem="1pW-sp-bc5" firstAttribute="top" secondItem="5fz-v4-oTw" secondAttribute="bottom" constant="8" id="ahe-1z-uOQ"/>
-                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="5fz-v4-oTw" secondAttribute="leading" id="hY3-VC-8G6"/>
-                                    <constraint firstItem="33N-9S-U1c" firstAttribute="top" secondItem="Kr0-I0-Zm6" secondAttribute="bottom" constant="13" id="m1I-4C-vc6"/>
-                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="leading" secondItem="Thd-M2-Hzg" secondAttribute="leading" id="mkU-XQ-VOZ"/>
-                                    <constraint firstItem="vxl-cz-Fja" firstAttribute="top" secondItem="I1V-a6-LmT" secondAttribute="bottom" constant="8" id="oOj-0u-gQm"/>
-                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="1pW-sp-bc5" secondAttribute="leading" id="s6i-Kp-gWo"/>
-                                    <constraint firstItem="lI3-Ph-9PU" firstAttribute="leading" secondItem="33N-9S-U1c" secondAttribute="leading" id="tqp-m9-URU"/>
-                                    <constraint firstAttribute="trailing" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" id="v5i-Fa-j08"/>
-                                    <constraint firstItem="Tvi-Gf-8KA" firstAttribute="top" secondItem="xZf-RW-0gW" secondAttribute="bottom" constant="8" id="xUH-kO-c24"/>
-                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="leading" secondItem="Thd-M2-Hzg" secondAttribute="leading" id="yaU-kY-56l"/>
-                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="xZf-RW-0gW" secondAttribute="leading" id="yy5-Lz-ySQ"/>
+                                    <constraint firstItem="33N-9S-U1c" firstAttribute="leading" secondItem="Thd-M2-Hzg" secondAttribute="leading" constant="36" id="1zn-Ie-Ld4"/>
+                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="centerX" secondItem="33N-9S-U1c" secondAttribute="centerX" id="4k4-jv-015"/>
+                                    <constraint firstItem="33N-9S-U1c" firstAttribute="trailing" secondItem="lI3-Ph-9PU" secondAttribute="trailing" id="4tO-Ga-Scs"/>
+                                    <constraint firstItem="vxl-cz-Fja" firstAttribute="top" secondItem="I1V-a6-LmT" secondAttribute="bottom" constant="19" id="5N0-U7-Fht"/>
+                                    <constraint firstItem="33N-9S-U1c" firstAttribute="top" secondItem="Kr0-I0-Zm6" secondAttribute="bottom" constant="16" id="6kx-0O-036"/>
+                                    <constraint firstItem="5fz-v4-oTw" firstAttribute="top" secondItem="Tvi-Gf-8KA" secondAttribute="bottom" constant="19" id="9aW-eV-O6c"/>
+                                    <constraint firstAttribute="bottom" secondItem="vxl-cz-Fja" secondAttribute="bottom" constant="20" id="FKh-oM-xJl"/>
+                                    <constraint firstItem="Tvi-Gf-8KA" firstAttribute="top" secondItem="xZf-RW-0gW" secondAttribute="bottom" constant="19" id="GZz-bu-qX1"/>
+                                    <constraint firstItem="lI3-Ph-9PU" firstAttribute="top" secondItem="33N-9S-U1c" secondAttribute="bottom" constant="19" id="Hsi-sy-MRP"/>
+                                    <constraint firstItem="xZf-RW-0gW" firstAttribute="top" secondItem="lI3-Ph-9PU" secondAttribute="bottom" constant="19" id="ISB-xg-5cH"/>
+                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="leading" secondItem="vxl-cz-Fja" secondAttribute="leading" id="MK4-zi-S7y"/>
+                                    <constraint firstItem="5fz-v4-oTw" firstAttribute="trailing" secondItem="1pW-sp-bc5" secondAttribute="trailing" id="Tii-jR-p4K"/>
+                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="trailing" secondItem="vxl-cz-Fja" secondAttribute="trailing" id="Yr6-Pj-VBR"/>
+                                    <constraint firstItem="1pW-sp-bc5" firstAttribute="leading" secondItem="I1V-a6-LmT" secondAttribute="leading" id="c2c-VP-VFe"/>
+                                    <constraint firstItem="lI3-Ph-9PU" firstAttribute="trailing" secondItem="xZf-RW-0gW" secondAttribute="trailing" id="eDB-lU-4Ek"/>
+                                    <constraint firstItem="Tvi-Gf-8KA" firstAttribute="trailing" secondItem="5fz-v4-oTw" secondAttribute="trailing" id="f2F-05-5hb"/>
+                                    <constraint firstItem="Tvi-Gf-8KA" firstAttribute="leading" secondItem="5fz-v4-oTw" secondAttribute="leading" id="f8j-xB-xHM"/>
+                                    <constraint firstAttribute="bottom" secondItem="vxl-cz-Fja" secondAttribute="bottom" constant="20" id="gMx-oD-lr3"/>
+                                    <constraint firstItem="lI3-Ph-9PU" firstAttribute="leading" secondItem="xZf-RW-0gW" secondAttribute="leading" id="iMs-V3-JBx"/>
+                                    <constraint firstItem="1pW-sp-bc5" firstAttribute="trailing" secondItem="I1V-a6-LmT" secondAttribute="trailing" id="mIL-92-eJa"/>
+                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="top" secondItem="Thd-M2-Hzg" secondAttribute="top" constant="15" id="mtu-Kw-bAE"/>
+                                    <constraint firstItem="I1V-a6-LmT" firstAttribute="top" secondItem="1pW-sp-bc5" secondAttribute="bottom" constant="19" id="npX-Vh-G7b"/>
+                                    <constraint firstItem="5fz-v4-oTw" firstAttribute="leading" secondItem="1pW-sp-bc5" secondAttribute="leading" id="qL3-Lz-kcR"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" id="qVl-wp-5m9"/>
+                                    <constraint firstItem="xZf-RW-0gW" firstAttribute="trailing" secondItem="Tvi-Gf-8KA" secondAttribute="trailing" id="skj-1Y-VxT"/>
+                                    <constraint firstItem="xZf-RW-0gW" firstAttribute="leading" secondItem="Tvi-Gf-8KA" secondAttribute="leading" id="vpO-Vo-nkH"/>
+                                    <constraint firstItem="Kr0-I0-Zm6" firstAttribute="leading" secondItem="Thd-M2-Hzg" secondAttribute="leading" id="wSg-qn-s23"/>
+                                    <constraint firstAttribute="bottom" secondItem="vxl-cz-Fja" secondAttribute="bottom" constant="20" id="wcI-QS-iPE"/>
+                                    <constraint firstItem="33N-9S-U1c" firstAttribute="leading" secondItem="lI3-Ph-9PU" secondAttribute="leading" id="wyP-PF-GNZ"/>
+                                    <constraint firstItem="1pW-sp-bc5" firstAttribute="top" secondItem="5fz-v4-oTw" secondAttribute="bottom" constant="19" id="zMr-JG-a64"/>
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                             </scrollView>
                         </subviews>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="0Zr-6v-G5n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Kr0-I0-Zm6" secondAttribute="trailing" constant="-16" id="5yc-7F-cMg"/>
-                            <constraint firstAttribute="trailing" secondItem="Thd-M2-Hzg" secondAttribute="trailing" id="7z8-rc-IcL"/>
-                            <constraint firstItem="a0b-Pi-kfJ" firstAttribute="top" secondItem="Thd-M2-Hzg" secondAttribute="bottom" id="Aam-BX-Rym"/>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="top" secondItem="c1A-9M-FrF" secondAttribute="top" id="CBN-tO-b3I"/>
                             <constraint firstItem="Src-al-vjN" firstAttribute="top" secondItem="c1A-9M-FrF" secondAttribute="top" id="Cig-CY-oEg"/>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="top" secondItem="c1A-9M-FrF" secondAttribute="top" id="LYs-Wg-a6c"/>
-                            <constraint firstItem="a0b-Pi-kfJ" firstAttribute="top" secondItem="Thd-M2-Hzg" secondAttribute="bottom" id="OTB-j3-cHb"/>
                             <constraint firstAttribute="trailing" secondItem="Src-al-vjN" secondAttribute="trailing" id="XlP-OB-OD2"/>
-                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="YU8-jV-Q33"/>
+                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="top" secondItem="c1A-9M-FrF" secondAttribute="top" id="aiy-U6-Hs8"/>
                             <constraint firstItem="a0b-Pi-kfJ" firstAttribute="top" secondItem="Src-al-vjN" secondAttribute="bottom" id="dFD-fU-Gzq"/>
-                            <constraint firstAttribute="trailing" secondItem="Thd-M2-Hzg" secondAttribute="trailing" id="dTb-P7-k4X"/>
                             <constraint firstItem="Src-al-vjN" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="mVR-4G-jQM"/>
+                            <constraint firstAttribute="trailing" secondItem="Thd-M2-Hzg" secondAttribute="trailing" id="oue-ki-oiS"/>
+                            <constraint firstAttribute="bottom" secondItem="Thd-M2-Hzg" secondAttribute="bottom" constant="-8" id="yAS-dd-gHY"/>
+                            <constraint firstItem="Thd-M2-Hzg" firstAttribute="leading" secondItem="c1A-9M-FrF" secondAttribute="leading" id="zd3-b0-Cie"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Главная" image="Places_Places-3" selectedImage="Places_Places-3" id="gYd-A3-WgA"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="694"/>
+                    <size key="freeformSize" width="320" height="725"/>
                     <connections>
                         <outlet property="itemsTable" destination="Kr0-I0-Zm6" id="JNK-9X-72x"/>
                     </connections>
@@ -280,7 +307,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1567.5" y="-879.92957746478874"/>
+            <point key="canvasLocation" x="1567.5" y="-880.45774647887322"/>
         </scene>
         <!--SiS Tab Bar Controller View Controller-->
         <scene sceneID="pCc-oh-v2g">
@@ -308,7 +335,7 @@
         <!--Контакты-->
         <scene sceneID="DrC-pm-Jvn">
             <objects>
-                <viewController id="G7Y-ee-Sgr" sceneMemberID="viewController">
+                <viewController id="G7Y-ee-Sgr" customClass="SiSContactsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xIz-or-KWb"/>
                         <viewControllerLayoutGuide type="bottom" id="6M2-wC-UDW"/>
@@ -316,32 +343,197 @@
                     <view key="view" contentMode="scaleToFill" id="Edt-0G-nO4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ScrollView" translatesAutoresizingMaskIntoConstraints="NO" id="fAx-ZF-bSb">
+                                <rect key="frame" x="0.0" y="-39" width="320" height="645"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mf6-j7-pcO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nr4-KE-fa5">
+                                        <rect key="frame" x="8" y="471" width="144" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="19"/>
+                                        <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Позвонить" backgroundImage="Rectangle 2 Copy 3"/>
+                                        <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="makeCall:" destination="iOW-KY-73A" eventType="touchUpInside" id="Thd-Dr-gSl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J58-f0-7ZV">
+                                        <rect key="frame" x="168" y="471" width="144" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="19"/>
+                                        <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Позвонить" backgroundImage="Rectangle 2 Copy 3"/>
+                                        <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
+                                            <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="makeCall:" destination="iOW-KY-73A" eventType="touchUpInside" id="nD2-XZ-aA9"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакты" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-b7-5TS">
+                                        <rect key="frame" x="77" y="30" width="166" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="tQg-b7-5TS" secondAttribute="height" multiplier="166:43" id="ab7-SN-BMm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="35"/>
+                                        <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="3" height="-1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-Ku-BRd">
+                                        <rect key="frame" x="15" y="81" width="291" height="92"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="92" id="wv5-Vy-pnC"/>
+                                        </constraints>
+                                        <string key="text">Мы находимся на Украине по адресу: 25006, г. Кропивницкий, ул. Михайловская, 73, 
+ХПП «Золотое шитье». 
++38 (0522) 27-26-20, +38 (050) 525-45-67</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-Jx-k4L">
+                                        <rect key="frame" x="40" y="193" width="240" height="240"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="RJn-Jx-k4L" secondAttribute="height" multiplier="1:1" id="l82-GI-eUb"/>
+                                        </constraints>
+                                    </mapView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="tQg-b7-5TS" firstAttribute="centerX" secondItem="mf6-j7-pcO" secondAttribute="centerX" id="5gT-uW-5BI"/>
+                                    <constraint firstAttribute="bottom" secondItem="tQg-b7-5TS" secondAttribute="bottom" constant="446" id="6gZ-x9-RkU"/>
+                                    <constraint firstItem="RJn-Jx-k4L" firstAttribute="top" secondItem="qKg-Ku-BRd" secondAttribute="bottom" constant="20" id="A56-2p-e24"/>
+                                    <constraint firstItem="qKg-Ku-BRd" firstAttribute="centerX" secondItem="tQg-b7-5TS" secondAttribute="centerX" id="Jfg-2r-Z4o"/>
+                                    <constraint firstAttribute="bottom" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="86" id="OdW-rn-JdP"/>
+                                    <constraint firstItem="tQg-b7-5TS" firstAttribute="top" secondItem="mf6-j7-pcO" secondAttribute="top" constant="30" id="Q7Q-dg-yWy"/>
+                                    <constraint firstItem="qKg-Ku-BRd" firstAttribute="leading" secondItem="mf6-j7-pcO" secondAttribute="leading" constant="15" id="UbS-LK-sD8"/>
+                                    <constraint firstItem="qKg-Ku-BRd" firstAttribute="top" secondItem="tQg-b7-5TS" secondAttribute="bottom" constant="8" id="XR1-d6-xDF"/>
+                                    <constraint firstItem="RJn-Jx-k4L" firstAttribute="centerX" secondItem="qKg-Ku-BRd" secondAttribute="centerX" id="aYH-G6-oGr"/>
+                                    <constraint firstAttribute="trailing" secondItem="tQg-b7-5TS" secondAttribute="trailing" constant="77" id="uKI-45-7oA"/>
+                                    <constraint firstItem="RJn-Jx-k4L" firstAttribute="leading" secondItem="mf6-j7-pcO" secondAttribute="leading" constant="40" id="yZc-90-UOp"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mf6-j7-pcO" firstAttribute="width" secondItem="Edt-0G-nO4" secondAttribute="width" id="7aI-5L-gDN"/>
+                            <constraint firstAttribute="trailing" secondItem="fAx-ZF-bSb" secondAttribute="trailing" id="Qom-aH-3HG"/>
+                            <constraint firstItem="mf6-j7-pcO" firstAttribute="height" secondItem="Edt-0G-nO4" secondAttribute="height" constant="-49" id="cKD-Ie-yI2"/>
+                            <constraint firstAttribute="bottom" secondItem="fAx-ZF-bSb" secondAttribute="bottom" constant="-38" id="fUz-UL-B8S"/>
+                            <constraint firstItem="mf6-j7-pcO" firstAttribute="centerX" secondItem="Edt-0G-nO4" secondAttribute="centerX" id="faa-2m-GbU"/>
+                            <constraint firstItem="fAx-ZF-bSb" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leading" id="gK2-Am-5Lp"/>
+                            <constraint firstItem="fAx-ZF-bSb" firstAttribute="top" secondItem="Edt-0G-nO4" secondAttribute="top" constant="-39" id="hMJ-x0-eDW"/>
+                            <constraint firstItem="mf6-j7-pcO" firstAttribute="centerY" secondItem="Edt-0G-nO4" secondAttribute="centerY" constant="-24.5" id="qFt-NH-edc"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Контакты" image="Phone_Phone-19" selectedImage="Phone_Phone-19" id="7d7-Fb-kJO"/>
+                    <connections>
+                        <outlet property="map" destination="RJn-Jx-k4L" id="ii4-CE-hng"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLc-2E-5jU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568" y="565"/>
+            <point key="canvasLocation" x="1567.5" y="564.08450704225356"/>
         </scene>
         <!--О нас-->
         <scene sceneID="OkT-jm-aRY">
             <objects>
                 <viewController storyboardIdentifier="SiSAboutUsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iOW-KY-73A" customClass="SiSAboutUsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="xdX-Gl-hob"/>
-                        <viewControllerLayoutGuide type="bottom" id="sB4-7t-pEH"/>
+                        <viewControllerLayoutGuide type="top" id="ERm-g5-HSK"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mti-fn-Q78"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Y8M-xr-HSM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <view key="view" contentMode="scaleToFill" id="oS2-7O-ecG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ScrollView" translatesAutoresizingMaskIntoConstraints="NO" id="kCP-OA-rhy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="645"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPo-sI-qkx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О нас" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3Z-sa-cCY">
+                                        <rect key="frame" x="116" y="30" width="88" height="43"/>
+                                        <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="35"/>
+                                        <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="shadowOffset" width="3" height="-1"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="clip" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9bs-1S-E7I">
+                                        <rect key="frame" x="8" y="71" width="304" height="1018"/>
+                                        <mutableString key="text">Мы рады приветствовать Вас в приложении Художественно-производственного предприятия «Золотое шитье», расположенного в самом центре Украины - г. Кировограде.
+Наше предприятие вот уже более 20 лет специализируется в изготовлении уникальной и в своем роде единственной продукции в жанре вышивки золотой, серебряной и цветной канителью: эксклюзивные именные иконы, церковная обрядовая продукция - облачения для архиереев, иереев, диаконов и других служителей церкви, митры архиерейские и иерейские с инкрустацией натуральными драгоценными и полудрагоценными камнями;  хоругви, Плащаницы, покровцы с воздухами и мн. др.; работ по геральдике, вышивке шевронов и т.п., каждое из которых, — единственное и оригинальное в своем роде. Кроме того в нашей мастерской Вы сможете заказать пошив облачений для архиерея, священника, диакона и протодиакона, других чинов церковной иерархии, ряс и подрясников, схимы и мн. другое. В нашей мастерской Вы можете заказать сборку митры (из наших и/или из своих материалов),  а также иконки на митры и кресты ювелирной работы.
+Все изделия изготавливаются традиционно вручную по восстановленным технологиям шитья древних мастеров Киевской Руси с использованием только натуральных камней: гранатов, аметистов, топазов, жемчуга, ониксов, бирюзы и др., что делает неповторимым каждое в отдельности изделие, придавая ему дополнительную красоту, богатство и изящество.
+Оригинальные и неповторимые работы наших мастеров получили высочайшую оценку, широкое признание и любовь не только на Украине, но и далеко за ее пределами. На сегодняшний день прошло более трех десятков выставок работ золотошвейной мастерской «Золотое шитье». Свыше полумиллиона людей смогли увидеть созданную золотошвеями красоту, оставляя восторженные реплики в «Книге отзывов». «Виставка справляє таке враження, як на послів князя Володимира справило богослужіня у Святій Софії Константинопольський: «О, князю, ми стояли на землі, а відчували небесне!….» Шана Вашим золотим рукам, бо тільки щира українка може зробити це чудо!», — такой отзыв об увиденном оставил в «Книге…» один из епископов УПЦ.</mutableString>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="2" height="-1"/>
+                                        <string key="userLabel">Zolotoe_shitvo[56526:8754013] Will NOT fetch API! 2017-01-29 17:33:45.325 Zolotoe_shitvo[56526:8754013] the cell tag is 5500 2017-01-29 17:33:46.496 Zolotoe_shitvo[56526:8754013] the cell tag is 6136 2017-01-29 17:33:46.891 Zolotoe_shitvo[56526:8754013] the cell tag is 5477 2017-01-29 17:33:47.344 Zolotoe_shitvo[56526:8754013] the cell tag is 5315Zolotoe_shitvo[56526:8754013] Will NOT fetch API! 2017-01-29 17:33:45.325 Zolotoe_shitvo[56526:8754013] the cell tag is 5500 2017-01-29 17:33:46.496 Zolotoe_shitvo[56526:8754013] the cell tag is 6136 2017-01-29 17:33:46.891 Zolotoe_shitvo[56526:8754013] the cell tag is 5477 2017-01-29 17:33:47.344 Zolotoe_shitvo[56526:8754013] the cell tag is 5315Zolotoe_shitvo[56526:8754013] Will NOT fetch API! 2017-01-29 17:33:45.325 Zolotoe_shitvo[56526:8754013] the cell tag is 5500 2017-01-29 17:33:46.496 Zolotoe_shitvo[56526:8754013] the cell tag is 6136 2017-01-29 17:33:46.891 Zolotoe_shitvo[56526:8754013] the cell tag is 5477 2017-01-29 17:33:47.344 Zolotoe_shitvo[56526:8754013] the cell tag is 5315Zolotoe_shitvo[56526:8754013] Will NOT fetch API! 2017-01-29 17:33:45.325 Zolotoe_shitvo[56526:8754013] the cell tag is 5500 2017-01-29 17:33:46.496 Zolotoe_shitvo[56526:8754013] the cell tag is 6136 2017-01-29 17:33:46.891 Zolotoe_shitvo[56526:8754013] the cell tag is 5477 2017-01-29 17:33:47.344 Zolotoe_shitvo[56526:8754013] the cell tag is 5315Zolotoe_shitvo[56526:8754013] Will NOT fetch API! 2017-01-29 17:33:45.325 Zolotoe_shitvo[56526:8754013] the cell tag is 5500 2017-01-29 17:33:46.496 Zolotoe_shitvo[56526:8754013] the cell tag is 6136 2017-01-29 17:33:46.891 Zolotoe_shitvo[56526:8754013] the cell tag is 5477 2017-01-29 17:33:47.344 Zolotoe_shitvo[56526:8754013] the cell tag is 5315</string>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9bs-1S-E7I" firstAttribute="top" secondItem="DPo-sI-qkx" secondAttribute="top" constant="71" id="1uQ-b0-0x3"/>
+                                    <constraint firstItem="9bs-1S-E7I" firstAttribute="bottom" secondItem="DPo-sI-qkx" secondAttribute="bottomMargin" constant="8" id="8IQ-cz-W3D"/>
+                                    <constraint firstItem="e3Z-sa-cCY" firstAttribute="centerX" secondItem="DPo-sI-qkx" secondAttribute="centerX" id="Ewf-7g-aIa"/>
+                                    <constraint firstItem="e3Z-sa-cCY" firstAttribute="top" secondItem="DPo-sI-qkx" secondAttribute="top" constant="30" id="YHd-qe-tMX"/>
+                                    <constraint firstItem="9bs-1S-E7I" firstAttribute="width" secondItem="DPo-sI-qkx" secondAttribute="width" constant="-16" id="d2h-Tw-Eae"/>
+                                    <constraint firstItem="9bs-1S-E7I" firstAttribute="trailing" secondItem="DPo-sI-qkx" secondAttribute="trailingMargin" id="g2Z-OO-jdV"/>
+                                    <constraint firstAttribute="bottom" secondItem="9bs-1S-E7I" secondAttribute="bottom" id="i7e-6Z-i9O"/>
+                                    <constraint firstItem="9bs-1S-E7I" firstAttribute="centerX" secondItem="e3Z-sa-cCY" secondAttribute="centerX" id="vTg-Hm-mTy"/>
+                                </constraints>
+                            </scrollView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Tb-2f-F6o">
+                                <rect key="frame" x="7" y="491.5" width="306" height="52"/>
+                                <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="30"/>
+                                <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Позвонить*" backgroundImage="Rectangle 2 Copy 3"/>
+                                <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeCall:" destination="iOW-KY-73A" eventType="touchUpInside" id="maU-Gz-v75"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woE-2d-pdt">
+                                <rect key="frame" x="11" y="551.5" width="298" height="36"/>
+                                <string key="text">* Возможность осуществления звонков предоставляется жителям Украины, для других стран будет взиматься дополнительная плата за роуминг!</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="10"/>
+                                <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="DPo-sI-qkx" firstAttribute="leading" secondItem="oS2-7O-ecG" secondAttribute="leading" id="0HE-wO-3Nz"/>
+                            <constraint firstItem="woE-2d-pdt" firstAttribute="leading" secondItem="oS2-7O-ecG" secondAttribute="leading" constant="11" id="5Hk-Rf-n2G"/>
+                            <constraint firstItem="3Tb-2f-F6o" firstAttribute="leading" secondItem="oS2-7O-ecG" secondAttribute="leading" constant="7" id="8g8-PR-l7c"/>
+                            <constraint firstItem="DPo-sI-qkx" firstAttribute="top" secondItem="oS2-7O-ecG" secondAttribute="top" id="CBh-Sq-l6l"/>
+                            <constraint firstItem="Mti-fn-Q78" firstAttribute="top" secondItem="woE-2d-pdt" secondAttribute="bottom" constant="8" id="I0f-AV-g1M"/>
+                            <constraint firstAttribute="trailing" secondItem="DPo-sI-qkx" secondAttribute="trailing" id="Pa0-1m-BAu"/>
+                            <constraint firstItem="woE-2d-pdt" firstAttribute="top" secondItem="3Tb-2f-F6o" secondAttribute="bottom" constant="8.5" id="Q0v-oz-h40"/>
+                            <constraint firstAttribute="trailing" secondItem="woE-2d-pdt" secondAttribute="trailing" constant="11" id="SWH-B4-q3L"/>
+                            <constraint firstItem="DPo-sI-qkx" firstAttribute="bottom" secondItem="Mti-fn-Q78" secondAttribute="top" constant="-122" id="VfH-S1-hHT"/>
+                            <constraint firstAttribute="trailing" secondItem="3Tb-2f-F6o" secondAttribute="trailing" constant="7" id="lh9-p3-uRR"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="1" title="О нас" image="Alerts-2" selectedImage="Alerts-2" id="FNo-uK-f4H"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="645"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wxx-jo-cGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1568" y="-127"/>
+            <point key="canvasLocation" x="1567.5" y="-129.40140845070422"/>
         </scene>
         <!--Новости-->
         <scene sceneID="rGI-vf-eL3">
@@ -354,7 +546,7 @@
                     <view key="view" contentMode="scaleToFill" id="m6m-lf-6uh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3294117647" green="0.023529411760000001" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" tag="3" title="Новости" image="Files_Files-43" selectedImage="Files_Files-43" id="A9g-01-Vip"/>
                 </viewController>

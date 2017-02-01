@@ -15,4 +15,10 @@
 @implementation SiSAboutUsViewController
 
 
+- (IBAction)makeCall:(UIButton *)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"telprompt://+380505254567"]];
+    
+    NSLog(@"calling...");
+}
 @end

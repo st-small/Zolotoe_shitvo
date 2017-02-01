@@ -10,5 +10,6 @@
 #import "SiSUITabBarItem.h"
 
 @interface SiSAboutUsViewController : SiSUITabBarItem
+- (IBAction)makeCall:(UIButton *)sender;
 
 @end

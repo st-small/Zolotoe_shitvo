@@ -14,7 +14,7 @@
     
     [super viewDidLoad];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Izhitsa" size:16.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"Hevletica" size:16.0f], NSFontAttributeName, nil] forState:UIControlStateNormal];
 
 }
 

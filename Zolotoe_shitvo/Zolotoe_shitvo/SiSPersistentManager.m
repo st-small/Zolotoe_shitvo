@@ -48,7 +48,7 @@
                                                                         andCount:10
                                                                        onSuccess:^(NSArray* productsArray) {
                                                                            
-                                                                           NSLog(@"productsArray count is %d", productsArray.count);
+                                                                           NSLog(@"productsArray count is %lu", (unsigned long)productsArray.count);
                                                                            
                                                                            [self.offerProducts addObjectsFromArray:productsArray];
                                                                            

@@ -17,6 +17,7 @@
 		527C43721DD773C5005808D1 /* SiSTabBarControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C43711DD773C5005808D1 /* SiSTabBarControllerViewController.m */; };
 		527C43751DD79680005808D1 /* SiSUITabBarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C43741DD79680005808D1 /* SiSUITabBarItem.m */; };
 		527C43781DD797DE005808D1 /* SiSAboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 527C43771DD797DE005808D1 /* SiSAboutUsViewController.m */; };
+		52CFB4971E3FC3F100870719 /* SiSContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52CFB4961E3FC3F100870719 /* SiSContactsViewController.m */; };
 		57023DFF1DD31BCB0045FA60 /* SiSServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57023DFE1DD31BCB0045FA60 /* SiSServerManager.m */; };
 		57023E041DD321F20045FA60 /* SiSPersistentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 57023E031DD321F20045FA60 /* SiSPersistentManager.m */; };
 		57023E071DD32A450045FA60 /* SiSProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 57023E061DD32A450045FA60 /* SiSProduct.m */; };
@@ -67,6 +68,8 @@
 		527C43741DD79680005808D1 /* SiSUITabBarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSUITabBarItem.m; sourceTree = "<group>"; };
 		527C43761DD797DE005808D1 /* SiSAboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSAboutUsViewController.h; sourceTree = "<group>"; };
 		527C43771DD797DE005808D1 /* SiSAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSAboutUsViewController.m; sourceTree = "<group>"; };
+		52CFB4951E3FC3F100870719 /* SiSContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSContactsViewController.h; sourceTree = "<group>"; };
+		52CFB4961E3FC3F100870719 /* SiSContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSContactsViewController.m; sourceTree = "<group>"; };
 		537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zolotoe_shitvo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57023DFD1DD31BCB0045FA60 /* SiSServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSServerManager.h; sourceTree = "<group>"; };
 		57023DFE1DD31BCB0045FA60 /* SiSServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSServerManager.m; sourceTree = "<group>"; };
@@ -209,6 +212,8 @@
 				527C43711DD773C5005808D1 /* SiSTabBarControllerViewController.m */,
 				527C43761DD797DE005808D1 /* SiSAboutUsViewController.h */,
 				527C43771DD797DE005808D1 /* SiSAboutUsViewController.m */,
+				52CFB4951E3FC3F100870719 /* SiSContactsViewController.h */,
+				52CFB4961E3FC3F100870719 /* SiSContactsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 					520379B51DB26AB400D3B5D3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 3PTYV272Z4;
+						ProvisioningStyle = Automatic;
 					};
 					520379D11DB26AB400D3B5D3 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -438,6 +444,7 @@
 				520379C71DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld in Sources */,
 				527C43781DD797DE005808D1 /* SiSAboutUsViewController.m in Sources */,
 				527C43751DD79680005808D1 /* SiSUITabBarItem.m in Sources */,
+				52CFB4971E3FC3F100870719 /* SiSContactsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +573,7 @@
 			baseConfigurationReference = FA83573B06462A34769ECE95 /* Pods-Zolotoe_shitvo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = Zolotoe_shitvo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -580,6 +588,7 @@
 			baseConfigurationReference = 48FF9C07C686B599694D6794 /* Pods-Zolotoe_shitvo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 3PTYV272Z4;
 				INFOPLIST_FILE = Zolotoe_shitvo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
