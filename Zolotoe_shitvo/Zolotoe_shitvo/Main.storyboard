@@ -349,36 +349,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ffv-l0-kPv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="551"/>
                             </imageView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-2Q-MS6">
-                                <rect key="frame" x="14" y="411" width="132" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nug-2Q-MS6" secondAttribute="height" multiplier="132:29" id="cCJ-ZZ-sKN"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="16"/>
-                                <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Позвонить" backgroundImage="Rectangle 2 Copy 3"/>
-                                <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeCall:" destination="iOW-KY-73A" eventType="touchUpInside" id="Ex4-Bl-1fh"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYA-aV-pYQ">
-                                <rect key="frame" x="172" y="411" width="132" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="vYA-aV-pYQ" secondAttribute="height" multiplier="132:29" id="C9X-M2-0fU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="16"/>
-                                <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Написать" backgroundImage="Rectangle 2 Copy 3"/>
-                                <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeCall:" destination="iOW-KY-73A" eventType="touchUpInside" id="LIn-B5-RFT"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакты" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-b7-5TS">
                                 <rect key="frame" x="79" y="30" width="161" height="42"/>
                                 <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="35"/>
@@ -400,45 +370,89 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-Jx-k4L">
-                                <rect key="frame" x="40" y="198" width="240" height="190"/>
+                                <rect key="frame" x="40" y="198" width="240" height="221"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-1l-FYh">
+                                <rect key="frame" x="40" y="198" width="240" height="221"/>
+                                <connections>
+                                    <action selector="openMap:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="eCf-1e-NyK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt0-pS-CdQ">
-                                <rect key="frame" x="97" y="465" width="126" height="60"/>
+                                <rect key="frame" x="118" y="490" width="83" height="44"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="7sD-Yr-Wjv"/>
-                                    <constraint firstAttribute="width" secondItem="Mt0-pS-CdQ" secondAttribute="height" multiplier="21:10" id="dxJ-bF-Js9"/>
+                                    <constraint firstAttribute="width" secondItem="Mt0-pS-CdQ" secondAttribute="height" multiplier="83:44" id="Ypi-wg-ZOv"/>
                                 </constraints>
                                 <state key="normal" image="Viber_logo.svg_">
                                     <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="makeViberCall:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="kUg-6s-ILj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-2Q-MS6">
+                                <rect key="frame" x="14" y="443" width="132" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nug-2Q-MS6" secondAttribute="height" multiplier="132:29" id="cCJ-ZZ-sKN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="16"/>
+                                <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Позвонить" backgroundImage="Rectangle 2 Copy 3"/>
+                                <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="makeCall:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="S9t-pg-UBZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYA-aV-pYQ">
+                                <rect key="frame" x="172" y="443" width="132" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="vYA-aV-pYQ" secondAttribute="height" multiplier="132:29" id="C9X-M2-0fU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="16"/>
+                                <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Написать" backgroundImage="Rectangle 2 Copy 3"/>
+                                <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendLetter:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="0l0-xa-lfl"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="nug-2Q-MS6" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="23" id="0ap-Cc-yfr"/>
+                            <constraint firstItem="nug-2Q-MS6" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="24" id="0ap-Cc-yfr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vYA-aV-pYQ" secondAttribute="trailing" id="6os-e3-WQ4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RJn-Jx-k4L" secondAttribute="trailing" constant="24" id="7dZ-Zc-YTg"/>
                             <constraint firstItem="ffv-l0-kPv" firstAttribute="top" secondItem="Edt-0G-nO4" secondAttribute="top" id="7fq-Md-fzO"/>
                             <constraint firstItem="ffv-l0-kPv" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leading" id="9W2-EH-fNM"/>
-                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="top" secondItem="vYA-aV-pYQ" secondAttribute="bottom" constant="25" id="Dzb-vS-fqQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mt0-pS-CdQ" secondAttribute="trailing" constant="103" id="9Yc-4h-LSI"/>
                             <constraint firstItem="qKg-Ku-BRd" firstAttribute="trailing" secondItem="Edt-0G-nO4" secondAttribute="trailingMargin" id="HKc-h0-xUl"/>
+                            <constraint firstItem="hY5-1l-FYh" firstAttribute="centerX" secondItem="RJn-Jx-k4L" secondAttribute="centerX" id="ICq-9x-pLp"/>
+                            <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="Mt0-pS-CdQ" secondAttribute="bottom" constant="17" id="J4x-sU-fAh"/>
+                            <constraint firstItem="hY5-1l-FYh" firstAttribute="leading" secondItem="RJn-Jx-k4L" secondAttribute="leading" id="JNF-yJ-iif"/>
                             <constraint firstItem="qKg-Ku-BRd" firstAttribute="top" secondItem="tQg-b7-5TS" secondAttribute="bottom" constant="8" symbolic="YES" id="KPN-O0-tkx"/>
                             <constraint firstItem="tQg-b7-5TS" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="63" id="LwI-Ml-EXk"/>
                             <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="ffv-l0-kPv" secondAttribute="bottom" id="Mol-Xb-clC"/>
+                            <constraint firstItem="hY5-1l-FYh" firstAttribute="bottom" secondItem="RJn-Jx-k4L" secondAttribute="bottom" id="N5s-WM-UJR"/>
                             <constraint firstItem="qKg-Ku-BRd" firstAttribute="centerX" secondItem="tQg-b7-5TS" secondAttribute="centerX" id="NKf-cJ-WUe"/>
+                            <constraint firstItem="hY5-1l-FYh" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="top" id="QTa-mi-GrE"/>
+                            <constraint firstItem="hY5-1l-FYh" firstAttribute="trailing" secondItem="RJn-Jx-k4L" secondAttribute="trailing" id="RjA-R9-RPP"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="top" secondItem="nug-2Q-MS6" secondAttribute="top" id="Uy1-cV-6cw"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="leading" secondItem="nug-2Q-MS6" secondAttribute="trailing" constant="26" id="agW-Lg-fLu"/>
                             <constraint firstItem="nug-2Q-MS6" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="-2" id="aqG-oe-6PD"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="firstBaseline" secondItem="nug-2Q-MS6" secondAttribute="baseline" id="cYY-So-gan"/>
                             <constraint firstItem="RJn-Jx-k4L" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="24" id="eoZ-o8-NUe"/>
-                            <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="Mt0-pS-CdQ" secondAttribute="bottom" constant="26" id="fsR-8w-kDr"/>
+                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="102" id="ezL-st-wT7"/>
                             <constraint firstItem="tQg-b7-5TS" firstAttribute="top" secondItem="xIz-or-KWb" secondAttribute="bottom" constant="10" id="ftf-lL-Lg4"/>
                             <constraint firstItem="RJn-Jx-k4L" firstAttribute="top" secondItem="qKg-Ku-BRd" secondAttribute="bottom" constant="22" id="l3B-V3-i61"/>
-                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="centerX" secondItem="RJn-Jx-k4L" secondAttribute="centerX" id="lCy-Ch-Jbc"/>
                             <constraint firstAttribute="trailing" secondItem="ffv-l0-kPv" secondAttribute="trailing" id="lEd-fD-XCq"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="baseline" secondItem="nug-2Q-MS6" secondAttribute="firstBaseline" id="lRl-rk-O7u"/>
-                            <constraint firstItem="vYA-aV-pYQ" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="23" id="la4-dq-fq9"/>
-                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="81" id="r06-cr-Y1h"/>
+                            <constraint firstItem="vYA-aV-pYQ" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="24" id="la4-dq-fq9"/>
+                            <constraint firstItem="hY5-1l-FYh" firstAttribute="centerY" secondItem="RJn-Jx-k4L" secondAttribute="centerY" id="onf-pb-ByJ"/>
+                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="top" secondItem="vYA-aV-pYQ" secondAttribute="bottom" constant="18" id="tEl-mV-8Em"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tQg-b7-5TS" secondAttribute="trailing" constant="64" id="tx0-9p-spa"/>
                         </constraints>
                     </view>

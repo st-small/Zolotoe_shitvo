@@ -19,7 +19,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-
     CLLocationCoordinate2D startCoord = CLLocationCoordinate2DMake(48.505408, 32.270358);
     MKCoordinateRegion adjustedRegion = [self.map regionThatFits:MKCoordinateRegionMakeWithDistance(startCoord, 3000, 3000)];
     [self.map setRegion:adjustedRegion animated:YES];
@@ -40,19 +39,85 @@
     [self.map addAnnotation:annotation];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)makeCall:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: @"telprompt://+380505254567"]];
+    
+    NSLog(@"calling...");
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)sendLetter:(id)sender {
+    
+    NSLog(@"letter...");
 }
-*/
+- (IBAction)makeViberCall:(id)sender {
+    
+    NSString *phoneNumber = @"+380501677352";
+    NSString * const viberScheme = @"viber://";
+    NSString * const tel = @"tel";
+    NSString * const chat = @"chat";
+    NSString *action = @"tel"; // this could be @"chat" or @"tel" depending on the choice of the user
+    
+    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:viberScheme]]) {
+        
+        // viber is installed
+        NSString *myString;
+        if ([action isEqualToString:tel]) {
+            myString = [NSString stringWithFormat:@"%@:%@", tel, phoneNumber];
+        } else if ([action isEqualToString:chat]) {
+            myString = [NSString stringWithFormat:@"%@:%@", chat, phoneNumber];
+        }
+        
+        NSURL *myUrl = [NSURL URLWithString:[viberScheme stringByAppendingString:myString]];
+        
+        if ([[UIApplication sharedApplication] canOpenURL:myUrl]) {
+            [[UIApplication sharedApplication] openURL:myUrl];
+        } else {
+            // wrong parameters
+        }
+        
+    } else {
+        // viber is not installed
+    }
+    
+    //skype calling
+    
+//    BOOL installed = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"skype:"]];
+//    
+//    if(installed) {
+//        
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"skype:gayane2401?call"]];
+//        
+//    } else {
+//        
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.com/apps/skype/skype"]];
+//    }
+    
+    NSLog(@"viber...");
+}
+
+- (IBAction)openMap:(id)sender {
+    
+    CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(48.505408, 32.270358);
+    
+    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coord];
+    
+    // Create a map item for the geocoded address to pass to Maps app
+    MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+    [mapItem setName:@"Золотое шитье"];
+    
+    // Set the directions mode to "Driving"
+    // Can use MKLaunchOptionsDirectionsModeWalking instead
+    NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
+    
+    // Get the "Current User Location" MKMapItem
+    MKMapItem *currentLocationMapItem = [MKMapItem mapItemForCurrentLocation];
+    
+    // Pass the current location and destination map items to the Maps app
+    // Set the direction mode in the launchOptions dictionary
+    [MKMapItem openMapsWithItems:@[currentLocationMapItem, mapItem] launchOptions:launchOptions];
+    
+    NSLog(@"the map will opening...");
+}
 
 @end

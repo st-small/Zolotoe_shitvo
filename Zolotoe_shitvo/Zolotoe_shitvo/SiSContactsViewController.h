@@ -10,4 +10,9 @@
 
 @interface SiSContactsViewController : SiSUITabBarItem
 
+- (IBAction)makeCall:(id)sender;
+- (IBAction)sendLetter:(id)sender;
+- (IBAction)makeViberCall:(id)sender;
+- (IBAction)openMap:(id)sender;
+
 @end
