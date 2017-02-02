@@ -48,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		48FF9C07C686B599694D6794 /* Pods-Zolotoe_shitvo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zolotoe_shitvo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zolotoe_shitvo/Pods-Zolotoe_shitvo.release.xcconfig"; sourceTree = "<group>"; };
+		520187181E43BFCC0021A8A2 /* HelveticaRoundedLTStd-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaRoundedLTStd-Bd.otf"; sourceTree = "<group>"; };
 		520379B61DB26AB400D3B5D3 /* Zolotoe_shitvo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zolotoe_shitvo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		520379BA1DB26AB400D3B5D3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		520379BC1DB26AB400D3B5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -159,6 +160,7 @@
 				520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */,
 				570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */,
 				52CFB4981E43839300870719 /* TT0756M_.TTF */,
+				520187181E43BFCC0021A8A2 /* HelveticaRoundedLTStd-Bd.otf */,
 				520379CD1DB26AB400D3B5D3 /* Info.plist */,
 				520379C51DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld */,
 				520379B91DB26AB400D3B5D3 /* Supporting Files */,

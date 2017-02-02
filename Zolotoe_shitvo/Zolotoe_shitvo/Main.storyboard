@@ -349,8 +349,8 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ffv-l0-kPv">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="551"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакты" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-b7-5TS">
-                                <rect key="frame" x="79" y="30" width="161" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакты" textAlignment="center" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-b7-5TS">
+                                <rect key="frame" x="14" y="30" width="290" height="43"/>
                                 <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="35"/>
                                 <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -358,11 +358,12 @@
                                 <size key="shadowOffset" width="3" height="-1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKg-Ku-BRd">
-                                <rect key="frame" x="15" y="80" width="289" height="96"/>
+                                <rect key="frame" x="16" y="81" width="288" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="h79-c0-LWc"/>
                                 </constraints>
-                                <string key="text">Мы находимся по адресу: 25006, Украина, г. Кропивницкий, ул. Михайловская, 73, 
+                                <string key="text">Мы находимся по адресу: 25006, Украина, г.Кропивницкий, 
+ул. Михайловская, 73, 
 ХПП «Золотое шитье». 
 +38 (0522) 27-26-20, +38 (050) 525-45-67</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
@@ -370,24 +371,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-Jx-k4L">
-                                <rect key="frame" x="40" y="198" width="240" height="221"/>
+                                <rect key="frame" x="40" y="199" width="240" height="220"/>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hY5-1l-FYh">
-                                <rect key="frame" x="40" y="198" width="240" height="221"/>
+                                <rect key="frame" x="40" y="199" width="240" height="220"/>
                                 <connections>
                                     <action selector="openMap:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="eCf-1e-NyK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt0-pS-CdQ">
-                                <rect key="frame" x="118" y="490" width="83" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Mt0-pS-CdQ" secondAttribute="height" multiplier="83:44" id="Ypi-wg-ZOv"/>
-                                </constraints>
-                                <state key="normal" image="Viber_logo.svg_">
-                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="makeViberCall:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="kUg-6s-ILj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-2Q-MS6">
@@ -420,24 +409,33 @@
                                     <action selector="sendLetter:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="0l0-xa-lfl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASc-0H-Mph">
+                                <rect key="frame" x="113" y="492" width="94" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ASc-0H-Mph" secondAttribute="height" multiplier="47:20" id="QQw-UZ-XUo"/>
+                                </constraints>
+                                <state key="normal" image="download"/>
+                                <connections>
+                                    <action selector="makeSkypeCall:" destination="G7Y-ee-Sgr" eventType="touchUpInside" id="NmU-mF-dwS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nug-2Q-MS6" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="24" id="0ap-Cc-yfr"/>
+                            <constraint firstItem="ASc-0H-Mph" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="97" id="0bA-LR-O8l"/>
+                            <constraint firstItem="tQg-b7-5TS" firstAttribute="trailing" secondItem="Edt-0G-nO4" secondAttribute="trailingMargin" id="2tC-W4-Caq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vYA-aV-pYQ" secondAttribute="trailing" id="6os-e3-WQ4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RJn-Jx-k4L" secondAttribute="trailing" constant="24" id="7dZ-Zc-YTg"/>
                             <constraint firstItem="ffv-l0-kPv" firstAttribute="top" secondItem="Edt-0G-nO4" secondAttribute="top" id="7fq-Md-fzO"/>
                             <constraint firstItem="ffv-l0-kPv" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leading" id="9W2-EH-fNM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Mt0-pS-CdQ" secondAttribute="trailing" constant="103" id="9Yc-4h-LSI"/>
                             <constraint firstItem="qKg-Ku-BRd" firstAttribute="trailing" secondItem="Edt-0G-nO4" secondAttribute="trailingMargin" id="HKc-h0-xUl"/>
                             <constraint firstItem="hY5-1l-FYh" firstAttribute="centerX" secondItem="RJn-Jx-k4L" secondAttribute="centerX" id="ICq-9x-pLp"/>
-                            <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="Mt0-pS-CdQ" secondAttribute="bottom" constant="17" id="J4x-sU-fAh"/>
                             <constraint firstItem="hY5-1l-FYh" firstAttribute="leading" secondItem="RJn-Jx-k4L" secondAttribute="leading" id="JNF-yJ-iif"/>
                             <constraint firstItem="qKg-Ku-BRd" firstAttribute="top" secondItem="tQg-b7-5TS" secondAttribute="bottom" constant="8" symbolic="YES" id="KPN-O0-tkx"/>
-                            <constraint firstItem="tQg-b7-5TS" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="63" id="LwI-Ml-EXk"/>
+                            <constraint firstItem="tQg-b7-5TS" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="-2" id="LwI-Ml-EXk"/>
                             <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="ffv-l0-kPv" secondAttribute="bottom" id="Mol-Xb-clC"/>
                             <constraint firstItem="hY5-1l-FYh" firstAttribute="bottom" secondItem="RJn-Jx-k4L" secondAttribute="bottom" id="N5s-WM-UJR"/>
-                            <constraint firstItem="qKg-Ku-BRd" firstAttribute="centerX" secondItem="tQg-b7-5TS" secondAttribute="centerX" id="NKf-cJ-WUe"/>
                             <constraint firstItem="hY5-1l-FYh" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="top" id="QTa-mi-GrE"/>
                             <constraint firstItem="hY5-1l-FYh" firstAttribute="trailing" secondItem="RJn-Jx-k4L" secondAttribute="trailing" id="RjA-R9-RPP"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="top" secondItem="nug-2Q-MS6" secondAttribute="top" id="Uy1-cV-6cw"/>
@@ -445,15 +443,16 @@
                             <constraint firstItem="nug-2Q-MS6" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="-2" id="aqG-oe-6PD"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="firstBaseline" secondItem="nug-2Q-MS6" secondAttribute="baseline" id="cYY-So-gan"/>
                             <constraint firstItem="RJn-Jx-k4L" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="24" id="eoZ-o8-NUe"/>
-                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="102" id="ezL-st-wT7"/>
                             <constraint firstItem="tQg-b7-5TS" firstAttribute="top" secondItem="xIz-or-KWb" secondAttribute="bottom" constant="10" id="ftf-lL-Lg4"/>
+                            <constraint firstItem="qKg-Ku-BRd" firstAttribute="centerX" secondItem="Edt-0G-nO4" secondAttribute="centerX" id="j8s-s2-RiM"/>
                             <constraint firstItem="RJn-Jx-k4L" firstAttribute="top" secondItem="qKg-Ku-BRd" secondAttribute="bottom" constant="22" id="l3B-V3-i61"/>
                             <constraint firstAttribute="trailing" secondItem="ffv-l0-kPv" secondAttribute="trailing" id="lEd-fD-XCq"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="baseline" secondItem="nug-2Q-MS6" secondAttribute="firstBaseline" id="lRl-rk-O7u"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="24" id="la4-dq-fq9"/>
                             <constraint firstItem="hY5-1l-FYh" firstAttribute="centerY" secondItem="RJn-Jx-k4L" secondAttribute="centerY" id="onf-pb-ByJ"/>
-                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="top" secondItem="vYA-aV-pYQ" secondAttribute="bottom" constant="18" id="tEl-mV-8Em"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="tQg-b7-5TS" secondAttribute="trailing" constant="64" id="tx0-9p-spa"/>
+                            <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="ASc-0H-Mph" secondAttribute="bottom" constant="19" id="v8l-rU-YU3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ASc-0H-Mph" secondAttribute="trailing" constant="97" id="xmz-2y-44Z"/>
+                            <constraint firstItem="ASc-0H-Mph" firstAttribute="top" secondItem="vYA-aV-pYQ" secondAttribute="bottom" constant="20" id="yXQ-vz-DAO"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Контакты" image="Phone_Phone-19" selectedImage="Phone_Phone-19" id="7d7-Fb-kJO"/>
@@ -589,7 +588,7 @@
         <image name="Rectangle 2 Copy 3" width="307" height="52"/>
         <image name="Rectangle H 2 Copy 3" width="307" height="52"/>
         <image name="ScrollView" width="320" height="645"/>
-        <image name="Viber_logo.svg_" width="175" height="88"/>
         <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
+        <image name="download" width="152" height="72"/>
     </resources>
 </document>

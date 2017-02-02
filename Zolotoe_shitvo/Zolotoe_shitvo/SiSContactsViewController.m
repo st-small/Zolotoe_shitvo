@@ -50,50 +50,51 @@
     
     NSLog(@"letter...");
 }
-- (IBAction)makeViberCall:(id)sender {
+- (IBAction)makeSkypeCall:(id)sender {
     
-    NSString *phoneNumber = @"+380501677352";
-    NSString * const viberScheme = @"viber://";
-    NSString * const tel = @"tel";
-    NSString * const chat = @"chat";
-    NSString *action = @"tel"; // this could be @"chat" or @"tel" depending on the choice of the user
-    
-    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:viberScheme]]) {
-        
-        // viber is installed
-        NSString *myString;
-        if ([action isEqualToString:tel]) {
-            myString = [NSString stringWithFormat:@"%@:%@", tel, phoneNumber];
-        } else if ([action isEqualToString:chat]) {
-            myString = [NSString stringWithFormat:@"%@:%@", chat, phoneNumber];
-        }
-        
-        NSURL *myUrl = [NSURL URLWithString:[viberScheme stringByAppendingString:myString]];
-        
-        if ([[UIApplication sharedApplication] canOpenURL:myUrl]) {
-            [[UIApplication sharedApplication] openURL:myUrl];
-        } else {
-            // wrong parameters
-        }
-        
-    } else {
-        // viber is not installed
-    }
+    // viber calling
+//    NSString *phoneNumber = @"+380501677352";
+//    NSString * const viberScheme = @"viber://";
+//    NSString * const tel = @"tel";
+//    NSString * const chat = @"chat";
+//    NSString *action = @"tel"; // this could be @"chat" or @"tel" depending on the choice of the user
+//    
+//    if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:viberScheme]]) {
+//        
+//        // viber is installed
+//        NSString *myString;
+//        if ([action isEqualToString:tel]) {
+//            myString = [NSString stringWithFormat:@"%@:%@", tel, phoneNumber];
+//        } else if ([action isEqualToString:chat]) {
+//            myString = [NSString stringWithFormat:@"%@:%@", chat, phoneNumber];
+//        }
+//        
+//        NSURL *myUrl = [NSURL URLWithString:[viberScheme stringByAppendingString:myString]];
+//        
+//        if ([[UIApplication sharedApplication] canOpenURL:myUrl]) {
+//            [[UIApplication sharedApplication] openURL:myUrl];
+//        } else {
+//            // wrong parameters
+//        }
+//        
+//    } else {
+//        // viber is not installed
+//    }
     
     //skype calling
     
-//    BOOL installed = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"skype:"]];
-//    
-//    if(installed) {
-//        
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"skype:gayane2401?call"]];
-//        
-//    } else {
-//        
-//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://itunes.com/apps/skype/skype"]];
-//    }
+    BOOL installed = [[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"skype:"]];
     
-    NSLog(@"viber...");
+    if(installed) {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"skype:gayane2401?call"]];
+        
+    } else {
+        
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/app/skype-for-iphone/id304878510?mt=8"]];
+    }
+    
+    NSLog(@"skype...");
 }
 
 - (IBAction)openMap:(id)sender {
