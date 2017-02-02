@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aZ7-29-2tD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aZ7-29-2tD">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -24,7 +24,7 @@
                 <navigationController id="aZ7-29-2tD" sceneMemberID="viewController">
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="9Z4-ha-bst">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9Z4-ha-bst">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -350,7 +350,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="551"/>
                             </imageView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nug-2Q-MS6">
-                                <rect key="frame" x="14" y="462" width="132" height="29"/>
+                                <rect key="frame" x="14" y="411" width="132" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nug-2Q-MS6" secondAttribute="height" multiplier="132:29" id="cCJ-ZZ-sKN"/>
                                 </constraints>
@@ -365,7 +365,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYA-aV-pYQ">
-                                <rect key="frame" x="172" y="462" width="132" height="29"/>
+                                <rect key="frame" x="172" y="411" width="132" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="vYA-aV-pYQ" secondAttribute="height" multiplier="132:29" id="C9X-M2-0fU"/>
                                 </constraints>
@@ -400,34 +400,27 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-Jx-k4L">
-                                <rect key="frame" x="40" y="199" width="240" height="240"/>
+                                <rect key="frame" x="40" y="198" width="240" height="190"/>
                             </mapView>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6L-g9-1Qx">
-                                <rect key="frame" x="94" y="505" width="132" height="29"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mt0-pS-CdQ">
+                                <rect key="frame" x="97" y="465" width="126" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="l6L-g9-1Qx" secondAttribute="height" multiplier="132:29" id="csy-PS-wJL"/>
+                                    <constraint firstAttribute="height" constant="60" id="7sD-Yr-Wjv"/>
+                                    <constraint firstAttribute="width" secondItem="Mt0-pS-CdQ" secondAttribute="height" multiplier="21:10" id="dxJ-bF-Js9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="16"/>
-                                <color key="tintColor" red="0.99592953920000005" green="0.84623318910000001" blue="0.59088599679999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Звонок Viber" backgroundImage="Rectangle 2 Copy 3"/>
-                                <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
-                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="Viber_logo.svg_">
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="makeCall:" destination="iOW-KY-73A" eventType="touchUpInside" id="4cy-xh-tfj"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="nug-2Q-MS6" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="23" id="0ap-Cc-yfr"/>
-                            <constraint firstItem="l6L-g9-1Qx" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="78" id="3FZ-n5-xwD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vYA-aV-pYQ" secondAttribute="trailing" id="6os-e3-WQ4"/>
                             <constraint firstAttribute="trailingMargin" secondItem="RJn-Jx-k4L" secondAttribute="trailing" constant="24" id="7dZ-Zc-YTg"/>
                             <constraint firstItem="ffv-l0-kPv" firstAttribute="top" secondItem="Edt-0G-nO4" secondAttribute="top" id="7fq-Md-fzO"/>
                             <constraint firstItem="ffv-l0-kPv" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leading" id="9W2-EH-fNM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="l6L-g9-1Qx" secondAttribute="trailing" constant="78" id="DYO-1h-iU0"/>
-                            <constraint firstItem="l6L-g9-1Qx" firstAttribute="top" secondItem="vYA-aV-pYQ" secondAttribute="bottom" constant="14" id="HBq-tW-X4G"/>
+                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="top" secondItem="vYA-aV-pYQ" secondAttribute="bottom" constant="25" id="Dzb-vS-fqQ"/>
                             <constraint firstItem="qKg-Ku-BRd" firstAttribute="trailing" secondItem="Edt-0G-nO4" secondAttribute="trailingMargin" id="HKc-h0-xUl"/>
                             <constraint firstItem="qKg-Ku-BRd" firstAttribute="top" secondItem="tQg-b7-5TS" secondAttribute="bottom" constant="8" symbolic="YES" id="KPN-O0-tkx"/>
                             <constraint firstItem="tQg-b7-5TS" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="63" id="LwI-Ml-EXk"/>
@@ -438,13 +431,15 @@
                             <constraint firstItem="nug-2Q-MS6" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="-2" id="aqG-oe-6PD"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="firstBaseline" secondItem="nug-2Q-MS6" secondAttribute="baseline" id="cYY-So-gan"/>
                             <constraint firstItem="RJn-Jx-k4L" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="24" id="eoZ-o8-NUe"/>
+                            <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="Mt0-pS-CdQ" secondAttribute="bottom" constant="26" id="fsR-8w-kDr"/>
                             <constraint firstItem="tQg-b7-5TS" firstAttribute="top" secondItem="xIz-or-KWb" secondAttribute="bottom" constant="10" id="ftf-lL-Lg4"/>
-                            <constraint firstItem="RJn-Jx-k4L" firstAttribute="top" secondItem="qKg-Ku-BRd" secondAttribute="bottom" constant="23" id="l3B-V3-i61"/>
+                            <constraint firstItem="RJn-Jx-k4L" firstAttribute="top" secondItem="qKg-Ku-BRd" secondAttribute="bottom" constant="22" id="l3B-V3-i61"/>
+                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="centerX" secondItem="RJn-Jx-k4L" secondAttribute="centerX" id="lCy-Ch-Jbc"/>
                             <constraint firstAttribute="trailing" secondItem="ffv-l0-kPv" secondAttribute="trailing" id="lEd-fD-XCq"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="baseline" secondItem="nug-2Q-MS6" secondAttribute="firstBaseline" id="lRl-rk-O7u"/>
                             <constraint firstItem="vYA-aV-pYQ" firstAttribute="top" secondItem="RJn-Jx-k4L" secondAttribute="bottom" constant="23" id="la4-dq-fq9"/>
+                            <constraint firstItem="Mt0-pS-CdQ" firstAttribute="leading" secondItem="Edt-0G-nO4" secondAttribute="leadingMargin" constant="81" id="r06-cr-Y1h"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tQg-b7-5TS" secondAttribute="trailing" constant="64" id="tx0-9p-spa"/>
-                            <constraint firstItem="6M2-wC-UDW" firstAttribute="top" secondItem="l6L-g9-1Qx" secondAttribute="bottom" constant="17" id="x0I-Id-2tC"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" tag="2" title="Контакты" image="Phone_Phone-19" selectedImage="Phone_Phone-19" id="7d7-Fb-kJO"/>
@@ -478,7 +473,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="О нас" textAlignment="natural" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3Z-sa-cCY">
-                                        <rect key="frame" x="116" y="30" width="88" height="43"/>
+                                        <rect key="frame" x="116" y="30" width="88" height="42"/>
                                         <fontDescription key="fontDescription" name="Izhitsa" family="Izhitsa" pointSize="35"/>
                                         <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -580,6 +575,7 @@
         <image name="Rectangle 2 Copy 3" width="307" height="52"/>
         <image name="Rectangle H 2 Copy 3" width="307" height="52"/>
         <image name="ScrollView" width="320" height="645"/>
+        <image name="Viber_logo.svg_" width="175" height="88"/>
         <image name="Zolotoe_shitje_nadpis" width="280" height="103"/>
     </resources>
 </document>

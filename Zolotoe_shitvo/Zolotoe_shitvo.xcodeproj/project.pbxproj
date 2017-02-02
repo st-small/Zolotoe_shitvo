@@ -70,6 +70,7 @@
 		527C43771DD797DE005808D1 /* SiSAboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSAboutUsViewController.m; sourceTree = "<group>"; };
 		52CFB4951E3FC3F100870719 /* SiSContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSContactsViewController.h; sourceTree = "<group>"; };
 		52CFB4961E3FC3F100870719 /* SiSContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSContactsViewController.m; sourceTree = "<group>"; };
+		52CFB4981E43839300870719 /* TT0756M_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT0756M_.TTF; sourceTree = "<group>"; };
 		537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zolotoe_shitvo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57023DFD1DD31BCB0045FA60 /* SiSServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSServerManager.h; sourceTree = "<group>"; };
 		57023DFE1DD31BCB0045FA60 /* SiSServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSServerManager.m; sourceTree = "<group>"; };
@@ -157,6 +158,7 @@
 				520379C81DB26AB400D3B5D3 /* Assets.xcassets */,
 				520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */,
 				570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */,
+				52CFB4981E43839300870719 /* TT0756M_.TTF */,
 				520379CD1DB26AB400D3B5D3 /* Info.plist */,
 				520379C51DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld */,
 				520379B91DB26AB400D3B5D3 /* Supporting Files */,
