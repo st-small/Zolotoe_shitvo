@@ -399,8 +399,8 @@
                                 <color key="textColor" red="0.99042552709999998" green="0.84377300740000005" blue="0.58667129279999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-Jx-k4L">
-                                <rect key="frame" x="39" y="199" width="240" height="240"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RJn-Jx-k4L">
+                                <rect key="frame" x="40" y="199" width="240" height="240"/>
                             </mapView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6L-g9-1Qx">
                                 <rect key="frame" x="94" y="505" width="132" height="29"/>
