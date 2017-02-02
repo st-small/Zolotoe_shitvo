@@ -8,8 +8,10 @@
 
 #import "SiSContactsViewController.h"
 #import <MapKit/MapKit.h>
+#import <MessageUI/MessageUI.h>
 
-@interface SiSContactsViewController ()
+@interface SiSContactsViewController () <MFMailComposeViewControllerDelegate>
+
 @property (weak, nonatomic) IBOutlet MKMapView *map;
 
 @end
@@ -46,10 +48,50 @@
     NSLog(@"calling...");
 }
 
+#pragma mark - sending mail
+
 - (IBAction)sendLetter:(id)sender {
+    
+    if ([MFMailComposeViewController canSendMail]) {
+        MFMailComposeViewController *mail = [[MFMailComposeViewController alloc] init];
+        mail.mailComposeDelegate = self;
+        [mail setSubject:@"Прошу связаться со мной для уточнения заказа"];
+        [mail setMessageBody:@"Здесь Вы можете указать контактные данные для связи.\n\n\nПисьмо отправлено из приложения \"Золотое шитье\" ver.1.1" isHTML:NO];
+        [mail setToRecipients:@[@"info@zolotoe-shitvo.kr.ua"]];
+        
+        [self presentViewController:mail animated:YES completion:NULL];
+        
+    } else {
+        
+        NSLog(@"This device cannot send email");
+    }
     
     NSLog(@"letter...");
 }
+
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    
+    switch (result) {
+        case MFMailComposeResultSent:
+            NSLog(@"You sent the email.");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"You saved a draft of this email");
+            break;
+        case MFMailComposeResultCancelled:
+            NSLog(@"You cancelled sending this email.");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail failed:  An error occurred when trying to compose this email");
+            break;
+        default:
+            NSLog(@"An error occurred when trying to compose this email");
+            break;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 - (IBAction)makeSkypeCall:(id)sender {
     
     // viber calling
