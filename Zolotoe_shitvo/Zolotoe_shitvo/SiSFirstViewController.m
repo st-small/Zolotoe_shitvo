@@ -104,15 +104,14 @@
 //  Метод перехода на новый вью контроллер с offerProducts
 - (void) downloadAndPushNextView {
         
-    //NSLog(@"Здесь открываем новый контроллер!");
     UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    SiSTabBarControllerViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSTabBarControllerViewController"];
-    SiSCategoriesViewController* vc2 = [vc.viewControllers objectAtIndex:0];
-    vc2.offerProducts = self.tempArray;
-    [self.navigationController presentViewController:vc
-                                            animated:YES
-                                          completion:nil];
-
+    SiSTabBarControllerViewController* vc1 = [sb instantiateViewControllerWithIdentifier:@"SiSTabBarControllerViewController"];
+    UINavigationController* nav = [vc1.viewControllers objectAtIndex:0];
+    SiSCategoriesViewController* vc = [[nav childViewControllers] firstObject];
+    vc.offerProducts = self.tempArray;
+    [self.navigationController presentViewController:vc1
+                                                 animated:YES
+                                               completion:nil];
 }
 
 - (void) dealloc {

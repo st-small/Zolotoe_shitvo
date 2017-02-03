@@ -32,6 +32,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.navigationController.navigationBarHidden = YES;
+    
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(tappedCell:)];
     doubleTap.numberOfTapsRequired = 1;
@@ -174,9 +176,7 @@
         SiSOneCategoryViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSOneCategoryViewController"];
         UINavigationController* navContr =[[UINavigationController alloc] initWithRootViewController:vc];
         
-        [self.tabBarController presentViewController:navContr
-                                                animated:YES
-                                              completion:nil];
+        [self.navigationController pushViewController:vc animated:YES];
         
         NSLog(@"иконы");
         
