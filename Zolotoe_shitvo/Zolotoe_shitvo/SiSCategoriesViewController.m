@@ -10,6 +10,7 @@
 #import "SiSProduct.h"
 #import "SiSCollectionViewCell.h"
 #import "SiSPersistentManager.h"
+#import "SiSOneCategoryViewController.h"
 
 #define targetHeight 170
 
@@ -62,6 +63,13 @@
     
     [self scrollSlowly];
 
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    
+    [super viewWillAppear:animated];
+    
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -154,19 +162,52 @@
         
         NSLog(@"the cell tag is %@", cell.idProduct);
         
-        
     }
 }
 
-- (IBAction)openCategory:(id)sender {
-    
-
-    for (UIButton* b in self.categoriesButtons) {
+- (IBAction)openCategory:(UIButton*)sender {
         
-        if (sender == b) {
-            
-            NSLog(@"------------");
-        }
+    if ([sender.currentTitle isEqual: @"Иконы"]) {
+        
+        //NSLog(@"Здесь открываем новый контроллер!");
+        UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        SiSOneCategoryViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSOneCategoryViewController"];
+        UINavigationController* navContr =[[UINavigationController alloc] initWithRootViewController:vc];
+        
+        [self.tabBarController presentViewController:navContr
+                                                animated:YES
+                                              completion:nil];
+        
+        NSLog(@"иконы");
+        
+    } else if ([sender.currentTitle isEqualToString:@"Митры"]) {
+        
+        NSLog(@"митры");
+        
+    } else if ([sender.currentTitle isEqualToString:@"Облачения"]) {
+        
+        NSLog(@"Облачения");
+        
+    } else if ([sender.currentTitle isEqualToString:@"Храмовое убранство"]) {
+        
+        NSLog(@"Храмовое убранство");
+        
+    } else if ([sender.currentTitle isEqualToString:@"Геральдика"]) {
+        
+        NSLog(@"Геральдика");
+        
+    } else if ([sender.currentTitle isEqualToString:@"Металлонить"]) {
+        
+        NSLog(@"Металлонить");
+        
+    } else if ([sender.currentTitle isEqualToString:@"Церковные ткани"]) {
+        
+        NSLog(@"Церковные ткани");
+        
+    } else if ([sender.currentTitle isEqualToString:@"Разное"]) {
+        
+        NSLog(@"Разное");
+        
     }
 }
 

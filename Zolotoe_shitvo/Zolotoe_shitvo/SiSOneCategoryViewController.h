@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "SiSCategoriesViewCell.h"
 
-@interface SiSOneCategoryTableViewController : UITableViewController
+@interface SiSOneCategoryViewController : UIViewController
 
 @end
