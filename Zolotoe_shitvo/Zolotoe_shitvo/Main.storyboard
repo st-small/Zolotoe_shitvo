@@ -158,6 +158,9 @@
                                         <state key="highlighted" backgroundImage="Rectangle H 2 Copy 3">
                                             <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="openCategory:" destination="zo9-84-Etv" eventType="touchUpInside" id="EGs-Lx-hOH"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lI3-Ph-9PU">
                                         <rect key="frame" x="36" y="270" width="248" height="40"/>
@@ -300,6 +303,14 @@
                     <size key="freeformSize" width="320" height="725"/>
                     <connections>
                         <outlet property="itemsTable" destination="Kr0-I0-Zm6" id="JNK-9X-72x"/>
+                        <outletCollection property="categoriesButtons" destination="33N-9S-U1c" id="sYI-A1-96o"/>
+                        <outletCollection property="categoriesButtons" destination="lI3-Ph-9PU" id="abo-N7-862"/>
+                        <outletCollection property="categoriesButtons" destination="xZf-RW-0gW" id="PhL-8O-zsB"/>
+                        <outletCollection property="categoriesButtons" destination="Tvi-Gf-8KA" id="TgZ-Fe-jhw"/>
+                        <outletCollection property="categoriesButtons" destination="5fz-v4-oTw" id="Jaj-jq-iRj"/>
+                        <outletCollection property="categoriesButtons" destination="1pW-sp-bc5" id="efI-ps-Ee8"/>
+                        <outletCollection property="categoriesButtons" destination="I1V-a6-LmT" id="zrj-6c-IMm"/>
+                        <outletCollection property="categoriesButtons" destination="vxl-cz-Fja" id="zlz-jm-ayu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GzX-ET-M5w" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -22,6 +22,8 @@
 @property (nonatomic, assign) CGPoint scrollingPoint, endPoint;
 @property (nonatomic, strong) NSTimer *scrollingTimer;
 
+@property (nonatomic, strong) IBOutletCollection(UIButton) NSArray* categoriesButtons;
+
 @end
 
 @implementation SiSCategoriesViewController
@@ -153,6 +155,18 @@
         NSLog(@"the cell tag is %@", cell.idProduct);
         
         
+    }
+}
+
+- (IBAction)openCategory:(id)sender {
+    
+
+    for (UIButton* b in self.categoriesButtons) {
+        
+        if (sender == b) {
+            
+            NSLog(@"------------");
+        }
     }
 }
 
