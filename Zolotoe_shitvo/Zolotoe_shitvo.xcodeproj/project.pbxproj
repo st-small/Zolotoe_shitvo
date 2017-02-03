@@ -24,6 +24,8 @@
 		5704836D1DD45836000FAD01 /* SiSCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5704836C1DD45836000FAD01 /* SiSCategoriesViewController.m */; };
 		570483741DD46168000FAD01 /* SiSCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 570483731DD46168000FAD01 /* SiSCollectionViewCell.m */; };
 		570C6F831DD51A9C007F2855 /* Izhitsa Normal.Ttf in Resources */ = {isa = PBXBuildFile; fileRef = 570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */; };
+		57112AAA1E447B190043209D /* SiSCategoriesViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57112AA91E447B190043209D /* SiSCategoriesViewCell.m */; };
+		57112AAD1E447C7A0043209D /* SiSOneCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57112AAC1E447C7A0043209D /* SiSOneCategoryTableViewController.m */; };
 		57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */; };
 		57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FD13C81DD1E5E30086AA1E /* Main.storyboard */; };
 		D9FBD0470D0F7C6F5616D6E4 /* libPods-Zolotoe_shitvo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */; };
@@ -84,6 +86,10 @@
 		570483721DD46168000FAD01 /* SiSCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSCollectionViewCell.h; sourceTree = "<group>"; };
 		570483731DD46168000FAD01 /* SiSCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCollectionViewCell.m; sourceTree = "<group>"; };
 		570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Izhitsa Normal.Ttf"; sourceTree = "<group>"; };
+		57112AA81E447B190043209D /* SiSCategoriesViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSCategoriesViewCell.h; sourceTree = "<group>"; };
+		57112AA91E447B190043209D /* SiSCategoriesViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCategoriesViewCell.m; sourceTree = "<group>"; };
+		57112AAB1E447C7A0043209D /* SiSOneCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSOneCategoryTableViewController.h; sourceTree = "<group>"; };
+		57112AAC1E447C7A0043209D /* SiSOneCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSOneCategoryTableViewController.m; sourceTree = "<group>"; };
 		57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSFirstViewController.h; sourceTree = "<group>"; };
 		57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSFirstViewController.m; sourceTree = "<group>"; };
 		57FD13C81DD1E5E30086AA1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -212,6 +218,8 @@
 				57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */,
 				5704836B1DD45836000FAD01 /* SiSCategoriesViewController.h */,
 				5704836C1DD45836000FAD01 /* SiSCategoriesViewController.m */,
+				57112AAB1E447C7A0043209D /* SiSOneCategoryTableViewController.h */,
+				57112AAC1E447C7A0043209D /* SiSOneCategoryTableViewController.m */,
 				527C43701DD773C5005808D1 /* SiSTabBarControllerViewController.h */,
 				527C43711DD773C5005808D1 /* SiSTabBarControllerViewController.m */,
 				527C43761DD797DE005808D1 /* SiSAboutUsViewController.h */,
@@ -229,6 +237,8 @@
 				57023E061DD32A450045FA60 /* SiSProduct.m */,
 				570483721DD46168000FAD01 /* SiSCollectionViewCell.h */,
 				570483731DD46168000FAD01 /* SiSCollectionViewCell.m */,
+				57112AA81E447B190043209D /* SiSCategoriesViewCell.h */,
+				57112AA91E447B190043209D /* SiSCategoriesViewCell.m */,
 				527C43731DD79680005808D1 /* SiSUITabBarItem.h */,
 				527C43741DD79680005808D1 /* SiSUITabBarItem.m */,
 			);
@@ -440,7 +450,9 @@
 				5704836D1DD45836000FAD01 /* SiSCategoriesViewController.m in Sources */,
 				57023E071DD32A450045FA60 /* SiSProduct.m in Sources */,
 				570483741DD46168000FAD01 /* SiSCollectionViewCell.m in Sources */,
+				57112AAA1E447B190043209D /* SiSCategoriesViewCell.m in Sources */,
 				520379BE1DB26AB400D3B5D3 /* AppDelegate.m in Sources */,
+				57112AAD1E447C7A0043209D /* SiSOneCategoryTableViewController.m in Sources */,
 				57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */,
 				520379BB1DB26AB400D3B5D3 /* main.m in Sources */,
 				57023DFF1DD31BCB0045FA60 /* SiSServerManager.m in Sources */,
