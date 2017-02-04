@@ -174,7 +174,6 @@
         //NSLog(@"Здесь открываем новый контроллер!");
         UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         SiSOneCategoryViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSOneCategoryViewController"];
-        UINavigationController* navContr =[[UINavigationController alloc] initWithRootViewController:vc];
         
         [self.navigationController pushViewController:vc animated:YES];
         
