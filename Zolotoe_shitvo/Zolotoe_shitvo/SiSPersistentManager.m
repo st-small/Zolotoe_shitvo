@@ -71,11 +71,56 @@
     return self.offerProducts;
 }
 
+- (NSMutableArray*) getCategoriesProductsOfCategory: (NSInteger) category andName: (NSString*) nameOfCategory {
+    
+    self.tempProducts = [NSMutableArray array];
+    
+    NSString* directory = [NSString stringWithFormat:@"/Documents/%@.bin", nameOfCategory];
+    NSData* data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:directory]];
+    
+    if (!data) {
+        
+        NSLog(@"tempProducts: Will fetch API!");
+        
+        [[SiSServerManager sharedManager] getProductsOfCategory:category
+                                                     WithOffset:self.tempProducts.count
+                                                       andCount:10
+                                                      onSuccess:^(NSArray *productsArray) {
+                                                          
+                                                          [self.tempProducts addObjectsFromArray:productsArray];
+                                                          [self saveTempProducts:directory];
+                                                          
+                                                          [[NSNotificationCenter defaultCenter] postNotificationName:@"tempProductsReady" object:nil userInfo:nil];
+                                                          
+                                                      } onFailure:^(NSError *error) {
+                                                          
+                                                          NSLog(@"error = %@", [error localizedDescription]);
+                                                      }];
+        
+    } else {
+        
+        NSLog(@"tempProducts: Will NOT fetch API!");
+        
+        self.tempProducts = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+    
+    return self.tempProducts;
+}
+
 - (void) saveOfferProducts {
     
     NSString* filename = [NSHomeDirectory() stringByAppendingString:@"/Documents/offerProducts.bin"];
     NSData* data = [NSKeyedArchiver archivedDataWithRootObject:self.offerProducts];
     [data writeToFile:filename atomically:YES];
+}
+
+- (void) saveTempProducts: (NSString*) directory {
+    
+    NSString* filename = [NSHomeDirectory() stringByAppendingString:directory];
+    NSData* data = [NSKeyedArchiver archivedDataWithRootObject:self.tempProducts];
+    [data writeToFile:filename atomically:YES];
+    
+    [self.tempProducts removeAllObjects];
 }
 
 @end

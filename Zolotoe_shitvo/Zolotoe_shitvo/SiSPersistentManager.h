@@ -13,9 +13,11 @@
 
 @property (strong, nonatomic) NSMutableArray* offerProducts;
 @property (strong, nonatomic) NSMutableArray* allProducts;
+@property (strong, nonatomic) NSMutableArray* tempProducts;
 
 + (SiSPersistentManager*) sharedManager;
 
 - (NSMutableArray*) getOfferProducts;
+- (NSMutableArray*) getCategoriesProducts;
 
 @end

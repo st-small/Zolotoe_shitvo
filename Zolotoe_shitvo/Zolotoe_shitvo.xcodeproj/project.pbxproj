@@ -10,7 +10,6 @@
 		520379BB1DB26AB400D3B5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379BA1DB26AB400D3B5D3 /* main.m */; };
 		520379BE1DB26AB400D3B5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379BD1DB26AB400D3B5D3 /* AppDelegate.m */; };
 		520379C71DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 520379C51DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld */; };
-		520379C91DB26AB400D3B5D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520379C81DB26AB400D3B5D3 /* Assets.xcassets */; };
 		520379D71DB26AB400D3B5D3 /* Zolotoe_shitvoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379D61DB26AB400D3B5D3 /* Zolotoe_shitvoTests.m */; };
 		520379E21DB26AB400D3B5D3 /* Zolotoe_shitvoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379E11DB26AB400D3B5D3 /* Zolotoe_shitvoUITests.m */; };
 		520379F21DB4065D00D3B5D3 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */; };
@@ -26,6 +25,7 @@
 		570C6F831DD51A9C007F2855 /* Izhitsa Normal.Ttf in Resources */ = {isa = PBXBuildFile; fileRef = 570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */; };
 		57112AAA1E447B190043209D /* SiSCategoriesViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57112AA91E447B190043209D /* SiSCategoriesViewCell.m */; };
 		57112AAD1E447C7A0043209D /* SiSOneCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57112AAC1E447C7A0043209D /* SiSOneCategoryViewController.m */; };
+		571668571E4878DF008DE25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571668561E4878DF008DE25E /* Assets.xcassets */; };
 		57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */; };
 		57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FD13C81DD1E5E30086AA1E /* Main.storyboard */; };
 		D9FBD0470D0F7C6F5616D6E4 /* libPods-Zolotoe_shitvo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */; };
@@ -56,7 +56,6 @@
 		520379BC1DB26AB400D3B5D3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		520379BD1DB26AB400D3B5D3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		520379C61DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zolotoe_shitvo.xcdatamodel; sourceTree = "<group>"; };
-		520379C81DB26AB400D3B5D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		520379CD1DB26AB400D3B5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		520379D21DB26AB400D3B5D3 /* Zolotoe_shitvoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Zolotoe_shitvoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		520379D61DB26AB400D3B5D3 /* Zolotoe_shitvoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Zolotoe_shitvoTests.m; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		57112AA91E447B190043209D /* SiSCategoriesViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSCategoriesViewCell.m; sourceTree = "<group>"; };
 		57112AAB1E447C7A0043209D /* SiSOneCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSOneCategoryViewController.h; sourceTree = "<group>"; };
 		57112AAC1E447C7A0043209D /* SiSOneCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSOneCategoryViewController.m; sourceTree = "<group>"; };
+		571668561E4878DF008DE25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57FD13C51DD1DD410086AA1E /* SiSFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSFirstViewController.h; sourceTree = "<group>"; };
 		57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSFirstViewController.m; sourceTree = "<group>"; };
 		57FD13C81DD1E5E30086AA1E /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -161,8 +161,8 @@
 				57023E011DD31BDA0045FA60 /* Controllers */,
 				5704836E1DD45E92000FAD01 /* Views */,
 				57023E001DD31BCF0045FA60 /* API */,
+				571668561E4878DF008DE25E /* Assets.xcassets */,
 				57FD13C81DD1E5E30086AA1E /* Main.storyboard */,
-				520379C81DB26AB400D3B5D3 /* Assets.xcassets */,
 				520379F11DB4065D00D3B5D3 /* Launch Screen.storyboard */,
 				570C6F821DD51A69007F2855 /* Izhitsa Normal.Ttf */,
 				52CFB4981E43839300870719 /* TT0756M_.TTF */,
@@ -372,7 +372,7 @@
 			files = (
 				57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */,
 				520379F21DB4065D00D3B5D3 /* Launch Screen.storyboard in Resources */,
-				520379C91DB26AB400D3B5D3 /* Assets.xcassets in Resources */,
+				571668571E4878DF008DE25E /* Assets.xcassets in Resources */,
 				570C6F831DD51A9C007F2855 /* Izhitsa Normal.Ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

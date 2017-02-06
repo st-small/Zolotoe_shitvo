@@ -32,8 +32,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationController.navigationBarHidden = YES;
-    
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(tappedCell:)];
     doubleTap.numberOfTapsRequired = 1;
@@ -71,6 +69,7 @@
     
     [super viewWillAppear:animated];
     
+    self.navigationController.hidesBarsOnSwipe = NO;
     self.navigationController.navigationBarHidden = YES;
 }
 
@@ -208,6 +207,11 @@
         NSLog(@"Разное");
         
     }
+}
+
+- (void) dealloc {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:@"tempProductsReady"];
 }
 
 @end

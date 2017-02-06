@@ -13,7 +13,8 @@
 
 + (SiSServerManager*) sharedManager;
 
-- (void) getProductsWithOffset: (NSInteger) offset
+- (void) getProductsOfCategory: (NSInteger) category
+                    WithOffset: (NSInteger) offset
                       andCount: (NSInteger) count
                      onSuccess: (void(^)(NSArray* productsArray)) success
                      onFailure: (void(^)(NSError* error)) failure;

@@ -31,6 +31,33 @@
     // Решил убрать статус бар во всем приложении
     application.statusBarHidden = YES;
     
+    // Кастомный NavigationBar
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:255/255.f green:219/255.f blue:148/255.f alpha:1]];
+    
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor blackColor];
+    shadow.shadowOffset = CGSizeMake(0, 3);
+    
+    NSShadow *shadow2 = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor blackColor];
+    shadow.shadowOffset = CGSizeMake(0, 2);
+    
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:84/255.f green:0.f blue:1/255.f alpha:1]];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor colorWithRed:255/255.f green:219/255.f blue:148/255.f alpha:1], NSForegroundColorAttributeName,
+      [UIFont fontWithName:@"Izhitsa" size:20.0], NSFontAttributeName,
+      shadow, NSShadowAttributeName, nil]];
+    
+    [[UIBarButtonItem appearanceWhenContainedInInstancesOfClasses:@[[UINavigationBar class]]] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:
+                                                                                                                      [UIColor colorWithRed:255/255.f green:219/255.f blue:148/255.f alpha:1], NSForegroundColorAttributeName,
+                                                                                                                      [UIFont fontWithName:@"Helvetica" size:15.0], NSFontAttributeName,
+                                                                                                                      shadow2, NSShadowAttributeName, nil] forState:UIControlStateNormal];
+    
+    // Кастомный рисунок для кнопки "Назад"
+//    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"BackButton"]];
+//    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"BackButton"]];
+    
     return YES;
 }
 

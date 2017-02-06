@@ -22,14 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.navigationItem.title = @"Золотое шитье:";
+    self.navigationItem.title = @"Золотое шитье";
     
-    [self.navigationController.navigationBar setTitleTextAttributes:
-     [NSDictionary dictionaryWithObjectsAndKeys:
-      [UIColor grayColor], NSForegroundColorAttributeName,
-      [UIFont fontWithName:@"Avenir Next" size:23.0], NSFontAttributeName, nil]];
+    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithTitle:@"< Назад" style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
     
-    UIBarButtonItem *btn = [[UIBarButtonItem alloc] initWithTitle:@"Назад" style:UIBarButtonItemStylePlain target:self action:@selector(backPressed:)];
     self.navigationItem.leftBarButtonItem = btn;
     
     self.navigationController.navigationBarHidden = NO;
@@ -43,9 +39,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    
-    //[self.tabBarController.tabBar setHidden:YES];
-    
+
+    self.navigationController.hidesBarsOnSwipe = YES;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
