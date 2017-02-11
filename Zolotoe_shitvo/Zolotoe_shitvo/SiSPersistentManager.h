@@ -18,6 +18,6 @@
 + (SiSPersistentManager*) sharedManager;
 
 - (NSMutableArray*) getOfferProducts;
-- (NSMutableArray*) getCategoriesProducts;
+- (NSMutableArray*) getCategoriesProductsOfCategory: (NSInteger)category andName: (NSString*) nameOfCategory;
 
 @end

@@ -11,4 +11,6 @@
 
 @interface SiSOneCategoryViewController : UIViewController
 
+@property (strong, nonatomic) NSMutableArray* productsArray;
+
 @end

@@ -87,10 +87,10 @@
                                                        andCount:10
                                                       onSuccess:^(NSArray *productsArray) {
                                                           
+                                                          NSLog(@"MITRASArray count is %lu", (unsigned long)productsArray.count);
+                                                          
                                                           [self.tempProducts addObjectsFromArray:productsArray];
                                                           [self saveTempProducts:directory];
-                                                          
-                                                          [[NSNotificationCenter defaultCenter] postNotificationName:@"tempProductsReady" object:nil userInfo:nil];
                                                           
                                                       } onFailure:^(NSError *error) {
                                                           
@@ -119,8 +119,6 @@
     NSString* filename = [NSHomeDirectory() stringByAppendingString:directory];
     NSData* data = [NSKeyedArchiver archivedDataWithRootObject:self.tempProducts];
     [data writeToFile:filename atomically:YES];
-    
-    [self.tempProducts removeAllObjects];
 }
 
 @end

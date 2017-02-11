@@ -25,12 +25,18 @@
 
 @property (nonatomic, strong) IBOutletCollection(UIButton) NSArray* categoriesButtons;
 
+#pragma mark - Properties of products for subCategories -
+
+@property (strong, nonatomic) NSMutableArray* mitres;
+
 @end
 
 @implementation SiSCategoriesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.mitres = [NSMutableArray array];
     
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self
                                                                                 action:@selector(tappedCell:)];
@@ -59,6 +65,19 @@
         }
     });
     
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        self.mitres = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:6 andName:@"Mitres"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            
+            
+        });
+    });
+    
+    
+    
     [self.itemsTable reloadData];
     
     [self scrollSlowly];
@@ -71,6 +90,7 @@
     
     self.navigationController.hidesBarsOnSwipe = NO;
     self.navigationController.navigationBarHidden = YES;
+    
 }
 
 - (void) viewDidAppear:(BOOL)animated {
@@ -170,16 +190,15 @@
         
     if ([sender.currentTitle isEqual: @"Иконы"]) {
         
-        //NSLog(@"Здесь открываем новый контроллер!");
-        UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        SiSOneCategoryViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSOneCategoryViewController"];
-        
-        [self.navigationController pushViewController:vc animated:YES];
-        
         NSLog(@"иконы");
         
     } else if ([sender.currentTitle isEqualToString:@"Митры"]) {
         
+        if (self.mitres.count > 0) {
+            
+            [self downloadAndPushNextView:self.mitres];
+        }
+    
         NSLog(@"митры");
         
     } else if ([sender.currentTitle isEqualToString:@"Облачения"]) {
@@ -211,7 +230,15 @@
 
 - (void) dealloc {
     
-    [[NSNotificationCenter defaultCenter] removeObserver:@"tempProductsReady"];
 }
+
+- (void) downloadAndPushNextView: (NSMutableArray*) tempArray {
+    
+    UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    SiSOneCategoryViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSOneCategoryViewController"];
+    vc.productsArray = tempArray;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 @end

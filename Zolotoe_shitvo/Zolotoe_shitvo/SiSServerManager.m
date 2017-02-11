@@ -61,32 +61,31 @@ static NSString* originLink = @"http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/";
     [self.sessionManager GET:linkWithOffset
                   parameters:nil
                     progress:nil
-                     success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+                     success:^(NSURLSessionTask * task, id responseObject) {
                          
                          NSMutableArray* objectsArray = [NSMutableArray array];
-                         
                          NSMutableArray* array = (NSMutableArray*)responseObject;
                          
                          for (NSUInteger i = 0; i < array.count; i++) {
                              
                              NSDictionary* singleProduct = array[i];
                              
-                             NSLog(@"новый жсон: %@", singleProduct);
+                             //NSLog(@"новый жсон: %@", singleProduct);
+                             SiSProduct* product = [[SiSProduct alloc] initWithSingleDict:singleProduct];
+                             [objectsArray addObject:product];
+                         }
+                         
+                         if (success) {
                              
-                             //SiSProduct* product = [[SiSProduct alloc] initWithSingleDict:singleProduct];
-                             
-                             //[objectsArray addObject:product];
+                             success(objectsArray);
                          }
                          
                      } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-                         
                          NSLog(@"Error: %@", error);
-                         
                          if (failure) {
                              failure(error);
                          }
-                         
-                     }];
+                        }];
     
 }
 
