@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "SiSCategoriesViewCell.h"
 
 @interface SiSOneCategoryViewController : UIViewController
 
 @property (strong, nonatomic) NSMutableArray* productsArray;
+@property (copy, nonatomic) NSString* selfTitle;
+@property (assign, nonatomic) NSInteger* categoryID;
 
 @end
