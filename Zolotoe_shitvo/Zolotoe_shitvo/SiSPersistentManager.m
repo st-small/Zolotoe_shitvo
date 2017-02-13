@@ -107,6 +107,34 @@
     return self.tempProducts;
 }
 
+- (NSMutableArray*) getCategoriesProductsOfCategory: (NSInteger) category andName: (NSString*) nameOfCategory withCount: (NSInteger) count {
+    
+    NSMutableArray* tempProducts = [NSMutableArray array];
+    NSMutableArray* tempProducts2 = [NSMutableArray array];
+    NSString* directory = [NSString stringWithFormat:@"/Documents/%@.bin", nameOfCategory];
+    NSData* data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:directory]];
+    
+    tempProducts = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+    
+    [[SiSServerManager sharedManager] getProductsOfCategory:category
+                                                 WithOffset:tempProducts.count
+                                                   andCount:10
+                                                  onSuccess:^(NSArray *productsArray) {
+                                                      
+                                                      NSLog(@"MITRASArray count is %lu", (unsigned long)productsArray.count);
+                                                      
+                                                      [tempProducts2 addObjectsFromArray:productsArray];
+                                                      [self saveTempProducts:directory];
+                                                      
+                                                      [[NSNotificationCenter defaultCenter] postNotificationName:@"tempProductsReady" object:nil userInfo:nil];
+                                                      
+                                                  } onFailure:^(NSError *error) {
+                                                      
+                                                      NSLog(@"error = %@", [error localizedDescription]);
+                                                  }];
+    return tempProducts2;
+}
+
 - (void) saveOfferProducts {
     
     NSString* filename = [NSHomeDirectory() stringByAppendingString:@"/Documents/offerProducts.bin"];

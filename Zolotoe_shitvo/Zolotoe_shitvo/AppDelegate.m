@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SiSPersistentManager.h"
 
 @interface AppDelegate ()
 
@@ -57,6 +58,17 @@
     // Кастомный рисунок для кнопки "Назад"
 //    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"BackButton"]];
 //    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"BackButton"]];
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:6 andName:@"Mitres"];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            
+            
+        });
+    });
     
     return YES;
 }

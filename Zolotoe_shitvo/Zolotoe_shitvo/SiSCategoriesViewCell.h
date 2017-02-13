@@ -11,6 +11,7 @@
 @interface SiSCategoriesViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UIView *shadow;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *idProductLabel;
 @property (weak, nonatomic) NSString* idProduct;

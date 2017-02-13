@@ -196,7 +196,7 @@
         
         if (self.mitres.count > 0) {
             
-            [self downloadAndPushNextView:self.mitres title:@"Митры" category: 6];
+            [self downloadAndPushNextView:self.mitres title:@"Митры" category: @6];
         }
     
         NSLog(@"митры");
@@ -232,13 +232,13 @@
     
 }
 
-- (void) downloadAndPushNextView: (NSMutableArray*) tempArray title: (NSString*) title category: (NSInteger) ID {
+- (void) downloadAndPushNextView: (NSMutableArray*) tempArray title: (NSString*) title category: (NSNumber*) ID {
     
     UIStoryboard* sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SiSOneCategoryViewController* vc = [sb instantiateViewControllerWithIdentifier:@"SiSOneCategoryViewController"];
     vc.productsArray = tempArray;
     vc.selfTitle = title;
-    vc.categoryID = &ID;
+    vc.categoryID = ID;
     [self.navigationController pushViewController:vc animated:YES];
 }
 

@@ -15,6 +15,8 @@
 @interface SiSOneCategoryViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableViewOutlet;
+@property (strong, nonatomic) NSMutableArray* tempProducts;
+@property (assign, nonatomic) BOOL loadingData;
 
 @end
 
@@ -22,6 +24,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.loadingData = NO;
+    self.tempProducts = [NSMutableArray array];
 
     self.navigationItem.title = self.selfTitle;
     
@@ -31,6 +36,29 @@
     
     self.navigationController.navigationBarHidden = NO;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateUI)
+                                                 name:@"tempProductsReady"
+                                               object:nil];
+    
+}
+
+- (void) updateUI {
+    
+    [self.productsArray addObjectsFromArray:self.tempProducts];
+    
+    NSMutableArray* newPaths = [NSMutableArray array];
+    for (NSUInteger i = self.productsArray.count - self.tempProducts.count; i < self.productsArray.count; i++) {
+        
+        [newPaths addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+    }
+    
+    [self.tableViewOutlet beginUpdates];
+    [self.tableViewOutlet insertRowsAtIndexPaths:newPaths
+                          withRowAnimation:UITableViewRowAnimationTop];
+    [self.tableViewOutlet endUpdates];
+    
+    self.loadingData = NO;
 }
 
 -(void)backPressed: (id)sender {
@@ -46,7 +74,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 10;
+    return self.productsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,29 +93,55 @@
     cell.idProductLabel.text = prd.idProduct;
     cell.imgView.image = prd.img;
     
-//    cell.imgView.layer.shadowColor = [UIColor blackColor].CGColor;
-//    cell.imgView.layer.shadowOffset = CGSizeMake(5, 2);
-//    cell.imgView.layer.shadowOpacity = 1;
-//    cell.imgView.layer.shadowRadius = 1.0;
-//    
-//    cell.imgView.clipsToBounds = YES;
-//    cell.imgView.layer.cornerRadius = 8.0;
-//    cell.imgView.layer.borderWidth = 2.0;
-//    cell.imgView.layer.borderColor = [UIColor colorWithRed:255/255.f green:219/255.f blue:148/255.f alpha:1].CGColor;
-    
-    CALayer* mask = [CALayer layer];
-    mask.frame = cell.imgView.frame;
-    cell.imgView.layer.mask = mask;
     cell.imgView.layer.masksToBounds = YES;
-    cell.imgView.layer.backgroundColor = [UIColor clearColor].CGColor;
+    cell.imgView.layer.cornerRadius = 10.0;
+    cell.imgView.layer.borderWidth = 1.0;
+    cell.imgView.layer.borderColor = [UIColor colorWithRed:255/255.f green:219/255.f blue:148/255.f alpha:1].CGColor;
     
-    //cell.imgView.layer.shadowColor = [UIColor blackColor].CGColor;
-    cell.imgView.layer.shadowOffset = CGSizeMake(10, 10);
-    cell.imgView.layer.shadowRadius = 10;
-    cell.imgView.layer.shadowOpacity = 1;
+    cell.shadow.layer.cornerRadius = 10.0f;
+    cell.shadow.layer.masksToBounds = NO;
+    cell.shadow.layer.shadowColor = [UIColor blackColor].CGColor;
+    cell.shadow.layer.shadowOffset = CGSizeMake(5.0f, 5.0f);
+    cell.shadow.layer.shadowOpacity = 1.f;
     
     return cell;
 }
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
+    if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height) {
+        if (!self.loadingData) {
+            
+            self.loadingData = YES;
+            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                
+                self.tempProducts = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:[self.categoryID intValue] andName:@"Mitres" withCount:self.productsArray.count];
+                
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                    
+                    
+                });
+            });
+            
+        }
+    }
+}
+
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    
+//    NSLog(@"self.categoryID = %d, indexPath = %ld, array count = %lu", [self.categoryID intValue], (long)indexPath.row, (unsigned long)self.productsArray.count);
+//    
+//    if (indexPath.row == self.productsArray.count - 1) {
+//        self.tempProducts = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:[self.categoryID intValue] andName:@"Mitres" withCount:self.productsArray.count];
+//    }
+//    
+//}
 
 
 @end

@@ -19,5 +19,6 @@
 
 - (NSMutableArray*) getOfferProducts;
 - (NSMutableArray*) getCategoriesProductsOfCategory: (NSInteger)category andName: (NSString*) nameOfCategory;
+- (NSMutableArray*) getCategoriesProductsOfCategory: (NSInteger) category andName: (NSString*) nameOfCategory withCount: (NSInteger) count;
 
 @end

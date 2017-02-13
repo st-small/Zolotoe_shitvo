@@ -14,6 +14,6 @@
 
 @property (strong, nonatomic) NSMutableArray* productsArray;
 @property (copy, nonatomic) NSString* selfTitle;
-@property (assign, nonatomic) NSInteger* categoryID;
+@property (assign, nonatomic) NSNumber* categoryID;
 
 @end
