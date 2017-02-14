@@ -36,6 +36,13 @@
     
     self.navigationController.navigationBarHidden = NO;
     
+    UIRefreshControl* refresh = [[UIRefreshControl alloc] init];
+    refresh.attributedTitle = [[NSAttributedString alloc] initWithString:@"test"];
+    [refresh addTarget:self
+                action:@selector(updateUI)
+      forControlEvents:UIControlEventValueChanged];
+    self.tableViewOutlet.refreshControl = refresh;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateUI)
                                                  name:@"tempProductsReady"
@@ -59,6 +66,7 @@
     [self.tableViewOutlet endUpdates];
     
     self.loadingData = NO;
+    [self.tableViewOutlet.refreshControl endRefreshing];
 }
 
 -(void)backPressed: (id)sender {
@@ -118,12 +126,9 @@
             
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 
-                self.tempProducts = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:[self.categoryID intValue] andName:@"Mitres" withCount:self.productsArray.count];
-                
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    
-                    
+                    self.tempProducts = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:[self.categoryID intValue] andName:@"Mitres" withCount:self.productsArray.count];
                 });
             });
             

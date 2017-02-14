@@ -8,6 +8,7 @@
 
 #import "SiSPersistentManager.h"
 #import "SiSServerManager.h"
+#import "SiSFirstViewController.h"
 
 @implementation SiSPersistentManager
 
@@ -94,7 +95,11 @@
                                                           
                                                       } onFailure:^(NSError *error) {
                                                           
-                                                          NSLog(@"error = %@", [error localizedDescription]);
+                                                          NSLog(@"SiSPersistent Manager error = %@", [error localizedDescription]);
+                                                          
+                                                          [[NSNotificationCenter defaultCenter] postNotificationName:@"error" object:nil userInfo:nil];
+                                                        
+                                                          
                                                       }];
         
     } else {

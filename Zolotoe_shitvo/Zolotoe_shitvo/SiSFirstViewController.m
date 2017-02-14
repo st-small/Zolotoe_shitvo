@@ -67,6 +67,11 @@
                                                      name:@"offerProductsReady"
                                                    object:nil];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(showAlertWhenSiteIsNotAvaliableError)
+                                                     name:@"error"
+                                                   object:nil];
+        
     }
 }
 
@@ -101,6 +106,28 @@
     [self presentViewController:alert animated:YES completion:nil];
 }
 
+// Вывод алерта, когда от сайта возвращается ошибка (404, 502 и пр.)
+- (void) showAlertWhenSiteIsNotAvaliableError {
+    
+    //NSString* title = [NSString stringWithFormat:@"Ошибка! %@", errorLocalizedDescription];
+    UIAlertController* alert = [UIAlertController
+                                alertControllerWithTitle:@"Ошибка!"
+                                message:@"Источник инфорации временно недоступен! Воспользуйтесь приложением немного позже!"
+                                preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* nopeAction = [UIAlertAction actionWithTitle:@"ОК"
+                                                         style:UIAlertActionStyleDefault
+                                                       handler:^(UIAlertAction * action) {
+                                                           
+                                                           exit(0);
+                                                           
+                                                       }];
+    
+    [alert addAction:nopeAction];
+    
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 //  Метод перехода на новый вью контроллер с offerProducts
 - (void) downloadAndPushNextView {
         
@@ -117,6 +144,7 @@
 - (void) dealloc {
     
     [[NSNotificationCenter defaultCenter] removeObserver:@"offerProductsReady"];
+    [[NSNotificationCenter defaultCenter] removeObserver:@"error"];
 }
 
 

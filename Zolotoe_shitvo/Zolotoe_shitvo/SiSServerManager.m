@@ -80,7 +80,7 @@ static NSString* originLink = @"http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/";
                              success(objectsArray);
                          }
                          
-                     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+                     } failure:^(NSURLSessionDataTask* task, NSError* error) {
                          NSLog(@"Error: %@", error);
                          if (failure) {
                              failure(error);
@@ -95,7 +95,7 @@ static NSString* originLink = @"http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/";
                                       onSuccess: (void(^)(NSArray* productsArray)) success
                                       onFailure: (void(^)(NSError* error)) failure {
     
-    NSString* linkWithOffset = [NSString stringWithFormat:@"%@posts?filter[meta_key]=offer&filter[meta_value]=1&offset=%ld", originLink, (long)offset];
+    NSString* linkWithOffset = [NSString stringWithFormat:@"%@posts?offer=1&offset=%ld", originLink, (long)offset];
     
     [self.sessionManager GET:linkWithOffset
                   parameters:nil
@@ -134,6 +134,7 @@ static NSString* originLink = @"http://www.zolotoe-shitvo.kr.ua/wp-json/wp/v2/";
     
     
 }
+
 
 
 @end
