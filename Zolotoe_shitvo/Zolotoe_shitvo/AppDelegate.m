@@ -59,16 +59,17 @@
 //    [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"BackButton"]];
 //    [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"BackButton"]];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:6 andName:@"Mitres"];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-            
-            
-        });
-    });
+    // Думал здесь делать предзагрузку товаров по категориям
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        
+//        [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:6 andName:@"Mitres"];
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//            
+//            
+//        });
+//    });
     
     return YES;
 }

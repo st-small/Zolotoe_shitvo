@@ -65,17 +65,15 @@
         }
     });
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        
-        self.mitres = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:6 andName:@"Mitres"];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            
-        });
-    });
-    
-    
-    
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        
+//        self.mitres = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:6 andName:@"Mitres"];
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            
+//        });
+//    });
+
     [self.itemsTable reloadData];
     
     [self scrollSlowly];
@@ -195,6 +193,11 @@
         if (self.mitres.count > 0) {
             
             [self downloadAndPushNextView:self.mitres title:@"Митры" category: @6];
+            
+        } else {
+            
+            [self alertForWhile];
+            self.mitres = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:6 andName:@"Mitres"];
         }
     
         NSLog(@"митры");
@@ -239,6 +242,29 @@
     vc.categoryID = ID;
     [self.navigationController pushViewController:vc animated:YES];
 }
+
+- (void) alertForWhile {
+    
+    UIAlertController *av = [UIAlertController alertControllerWithTitle:@"Идет загрузка..."
+                                                                message:@"Мы еще не все подготовили..."
+                                                         preferredStyle:UIAlertControllerStyleAlert];
+        
+    UIView *firstSubview = av.view.subviews.firstObject;
+    UIView *alertContentView = firstSubview.subviews.firstObject;
+    for (UIView *subSubView in alertContentView.subviews) { //This is main catch
+        subSubView.tintColor = [UIColor greenColor];
+        subSubView.backgroundColor = [UIColor colorWithRed:84/255.f green:0.f blue:1/255.f alpha:1]; //Here you change background
+        subSubView.layer.cornerRadius = 10.f;
+        subSubView.layer.borderWidth = 1.0;
+        subSubView.layer.borderColor = [UIColor colorWithRed:255/255.f green:219/255.f blue:148/255.f alpha:1].CGColor;
+        subSubView.layer.masksToBounds = YES;
+        
+    }
+    
+    [self presentViewController:av animated:YES completion:nil];
+}
+
+
 
 
 @end
