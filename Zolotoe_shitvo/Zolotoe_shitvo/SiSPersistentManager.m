@@ -91,7 +91,7 @@
                                                           NSLog(@"MITRASArray count is %lu", (unsigned long)productsArray.count);
                                                           
                                                           [self.tempProducts addObjectsFromArray:productsArray];
-                                                          [self saveTempProducts:directory];
+                                                          //[self saveTempProducts:directory];
                                                           
                                                       } onFailure:^(NSError *error) {
                                                           
@@ -129,7 +129,7 @@
                                                       NSLog(@"MITRASArray count is %lu", (unsigned long)productsArray.count);
                                                       
                                                       [tempProducts2 addObjectsFromArray:productsArray];
-                                                      [self saveTempProducts:directory];
+                                                      //[self saveTempProducts:directory];
                                                       
                                                       [[NSNotificationCenter defaultCenter] postNotificationName:@"tempProductsReady" object:nil userInfo:nil];
                                                       
@@ -152,6 +152,33 @@
     NSString* filename = [NSHomeDirectory() stringByAppendingString:directory];
     NSData* data = [NSKeyedArchiver archivedDataWithRootObject:self.tempProducts];
     [data writeToFile:filename atomically:YES];
+}
+
+- (void) getCategoriesProductsOfCategory:(NSInteger)category
+                                            andName:(NSString *)nameOfCategory
+                                          onSuccess:(void (^)(NSArray *))success
+                                          onFailure:(void (^)(NSError *))failure {
+    
+        
+        [[SiSServerManager sharedManager] getProductsOfCategory:category
+                                                     WithOffset:self.tempProducts.count
+                                                       andCount:10
+                                                      onSuccess:^(NSArray *productsArray) {
+                                                          
+                                                          if (success) {
+                                                              
+                                                              success(productsArray);
+                                                          }
+                                                          
+                                                      } onFailure:^(NSError *error) {
+
+                                                          
+                                                          
+                                                      }];
+        
+
+    
+    
 }
 
 @end

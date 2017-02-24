@@ -13,5 +13,7 @@
 
 @property (strong, nonatomic) NSMutableArray* offerProducts;
 
+- (void) downloadAndPushNextView: (NSMutableArray*) tempArray title: (NSString*) title category: (NSNumber*) ID;
+
 
 @end

@@ -21,4 +21,8 @@
 - (NSMutableArray*) getCategoriesProductsOfCategory: (NSInteger)category andName: (NSString*) nameOfCategory;
 - (NSMutableArray*) getCategoriesProductsOfCategory: (NSInteger) category andName: (NSString*) nameOfCategory withCount: (NSInteger) count;
 
+- (void) getCategoriesProductsOfCategory: (NSInteger)category
+                                            andName: (NSString*) nameOfCategory
+                                          onSuccess: (void(^)(NSArray* productsArray)) success
+                                          onFailure: (void(^)(NSError* error)) failure;
 @end

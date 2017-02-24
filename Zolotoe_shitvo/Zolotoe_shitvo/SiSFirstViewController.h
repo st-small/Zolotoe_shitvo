@@ -11,7 +11,7 @@
 
 @interface SiSFirstViewController : UIViewController
 
-- (void) showAlertWhenSiteIsNotAvaliableError:(NSString*) errorLocalizedDescription;
+- (void) showAlertWhenSiteIsNotAvaliableError;
 
 
 @end

@@ -124,11 +124,13 @@
             
             self.loadingData = YES;
             
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+                
+                self.tempProducts = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:[self.categoryID integerValue] andName:@"Mitres" withCount:self.productsArray.count];
                 
                 dispatch_async(dispatch_get_main_queue(), ^{
                     
-                    self.tempProducts = [[SiSPersistentManager sharedManager] getCategoriesProductsOfCategory:[self.categoryID intValue] andName:@"Mitres" withCount:self.productsArray.count];
+                    [self.tableViewOutlet reloadData];
                 });
             });
             

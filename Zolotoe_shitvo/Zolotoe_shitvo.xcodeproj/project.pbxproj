@@ -334,6 +334,11 @@
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 3PTYV272Z4;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					520379D11DB26AB400D3B5D3 = {
 						CreatedOnToolsVersion = 7.3.1;
