@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BBF5231090E3ABB655638D6 /* Pods_Zolotoe_shitvo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6FE94D4D21134C11997E92 /* Pods_Zolotoe_shitvo.framework */; };
 		520379BB1DB26AB400D3B5D3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379BA1DB26AB400D3B5D3 /* main.m */; };
 		520379BE1DB26AB400D3B5D3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 520379BD1DB26AB400D3B5D3 /* AppDelegate.m */; };
 		520379C71DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 520379C51DB26AB400D3B5D3 /* Zolotoe_shitvo.xcdatamodeld */; };
@@ -28,7 +29,6 @@
 		571668571E4878DF008DE25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 571668561E4878DF008DE25E /* Assets.xcassets */; };
 		57FD13C71DD1DD410086AA1E /* SiSFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57FD13C61DD1DD410086AA1E /* SiSFirstViewController.m */; };
 		57FD13C91DD1E5E30086AA1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57FD13C81DD1E5E30086AA1E /* Main.storyboard */; };
-		D9FBD0470D0F7C6F5616D6E4 /* libPods-Zolotoe_shitvo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D6FE94D4D21134C11997E92 /* Pods_Zolotoe_shitvo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zolotoe_shitvo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FF9C07C686B599694D6794 /* Pods-Zolotoe_shitvo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zolotoe_shitvo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zolotoe_shitvo/Pods-Zolotoe_shitvo.release.xcconfig"; sourceTree = "<group>"; };
 		520187181E43BFCC0021A8A2 /* HelveticaRoundedLTStd-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "HelveticaRoundedLTStd-Bd.otf"; sourceTree = "<group>"; };
 		520379B61DB26AB400D3B5D3 /* Zolotoe_shitvo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zolotoe_shitvo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +74,6 @@
 		52CFB4951E3FC3F100870719 /* SiSContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSContactsViewController.h; sourceTree = "<group>"; };
 		52CFB4961E3FC3F100870719 /* SiSContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSContactsViewController.m; sourceTree = "<group>"; };
 		52CFB4981E43839300870719 /* TT0756M_.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = TT0756M_.TTF; sourceTree = "<group>"; };
-		537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Zolotoe_shitvo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57023DFD1DD31BCB0045FA60 /* SiSServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSServerManager.h; sourceTree = "<group>"; };
 		57023DFE1DD31BCB0045FA60 /* SiSServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SiSServerManager.m; sourceTree = "<group>"; };
 		57023E021DD321F20045FA60 /* SiSPersistentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SiSPersistentManager.h; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9FBD0470D0F7C6F5616D6E4 /* libPods-Zolotoe_shitvo.a in Frameworks */,
+				1BBF5231090E3ABB655638D6 /* Pods_Zolotoe_shitvo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +125,7 @@
 		2A5192BA8CD528D42A148ABC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				537D011F5C4EA45BD7F25DCB /* libPods-Zolotoe_shitvo.a */,
+				1D6FE94D4D21134C11997E92 /* Pods_Zolotoe_shitvo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
